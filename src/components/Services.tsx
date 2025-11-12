@@ -1,82 +1,60 @@
-import { Brain, Camera } from "lucide-react";
-import aiProjectBg from "@/assets/ai-project-bg.jpg";
+import { Camera } from "lucide-react";
 
 const Services = () => {
   const services = [
     {
-      icon: Brain,
-      title: "AI Model Development",
-      description:
-        "Designing and building ML and LLM-based solutions for prediction, automation, and intelligent data analysis. Specialized in computer vision projects including image segmentation and object detection.",
-      features: [
-        "Machine Learning Models",
-        "Large Language Models (LLMs)",
-        "Computer Vision Systems",
-        "Predictive Analytics",
-        "Intelligent Automation",
-      ],
-      gradient: "from-accent/20 to-accent/5",
+      title: "Travel",
+      description: "Let's take your photograph to the wonderful and beautiful moment",
+      icon: "M12 2L2 7L12 12L22 7L12 2Z M2 17L12 22L22 17 M2 12L12 17L22 12"
     },
     {
-      icon: Camera,
-      title: "Photography Services",
-      description:
-        "Creative photography capturing meaningful moments and visual stories with an artistic and professional touch. Specializing in natural landscapes, portraits, and artistic compositions.",
-      features: [
-        "Nature & Landscape Photography",
-        "Portrait Photography",
-        "Artistic Composition",
-        "Professional Editing",
-        "Visual Storytelling",
-      ],
-      gradient: "from-coral/20 to-coral/5",
+      title: "Personal",
+      description: "Let's take your photograph to the wonderful and beautiful moment",
+      icon: "M12 2L2 7L12 12L22 7L12 2Z M2 17L12 22L22 17 M2 12L12 17L22 12"
     },
+    {
+      title: "Wedding",
+      description: "Let's take your photograph to the wonderful and beautiful moment",
+      icon: "M12 2L2 7L12 12L22 7L12 2Z M2 17L12 22L22 17 M2 12L12 17L22 12"
+    }
   ];
 
   return (
-    <section id="services" className="py-20 px-4 bg-secondary/30 relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-1/2 h-full opacity-5">
-        <img src={aiProjectBg} alt="" className="w-full h-full object-cover" />
-      </div>
-
-      <div className="container mx-auto relative z-10">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">Services I Provide</h2>
-          <div className="w-20 h-1 bg-accent mx-auto mb-4" />
+    <section id="services" className="py-20 px-4 bg-muted relative">
+      <div className="container mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-5xl md:text-6xl font-bold text-primary mb-4" style={{ fontFamily: 'Georgia, serif' }}>
+            Service I Provide
+          </h2>
+          <div className="w-32 h-1 bg-accent mx-auto mb-6" />
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Combining technical expertise with creative vision to deliver exceptional results
+            Let's use the services I am providing for your beautiful moment<br/>
+            services I am providing for your beautiful
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {services.map((service, index) => {
-            const Icon = service.icon;
-            return (
-              <div
-                key={index}
-                className={`bg-card rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-border bg-gradient-to-br ${service.gradient}`}
-              >
-                <div className="mb-6">
-                  <div className="inline-block p-4 bg-background rounded-xl shadow-sm mb-4">
-                    <Icon className="h-8 w-8 text-accent" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-primary mb-3">{service.title}</h3>
-                  <p className="text-foreground leading-relaxed">{service.description}</p>
-                </div>
-
-                <div className="space-y-2">
-                  <h4 className="font-semibold text-primary mb-3">Key Offerings:</h4>
-                  {service.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center gap-2">
-                      <div className="w-1.5 h-1.5 rounded-full bg-accent" />
-                      <span className="text-foreground">{feature}</span>
-                    </div>
-                  ))}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="bg-background rounded-2xl p-8 text-center hover:shadow-xl transition-all duration-300 group"
+            >
+              {/* Camera Icon Illustration */}
+              <div className="mb-6 flex justify-center">
+                <div className="relative w-32 h-32">
+                  <Camera className="w-full h-full text-foreground group-hover:scale-110 transition-transform duration-300" strokeWidth={1} />
                 </div>
               </div>
-            );
-          })}
+              
+              <h3 className="text-2xl font-bold text-primary mb-4" style={{ fontFamily: 'Georgia, serif' }}>
+                {service.title}
+              </h3>
+              
+              <p className="text-foreground leading-relaxed">
+                {service.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

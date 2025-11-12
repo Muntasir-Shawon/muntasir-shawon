@@ -43,6 +43,10 @@ export default {
           DEFAULT: "hsl(var(--coral))",
           foreground: "hsl(var(--coral-foreground))",
         },
+        yellow: {
+          light: "hsl(var(--yellow-light))",
+          bright: "hsl(var(--yellow-bright))",
+        },
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",

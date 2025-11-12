@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Camera } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Navigation = () => {
@@ -25,12 +25,9 @@ const Navigation = () => {
 
   const navLinks = [
     { label: "Home", href: "hero" },
-    { label: "About", href: "about" },
-    { label: "Skills", href: "skills" },
-    { label: "Services", href: "services" },
-    { label: "Projects", href: "projects" },
-    { label: "Gallery", href: "gallery" },
-    { label: "Contact", href: "contact" },
+    { label: "Portfolio", href: "gallery" },
+    { label: "Features", href: "services" },
+    { label: "Blog", href: "projects" },
   ];
 
   return (
@@ -41,11 +38,17 @@ const Navigation = () => {
     >
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
+          {/* Logo */}
           <button
             onClick={() => scrollToSection("hero")}
-            className="text-xl font-bold text-primary hover:text-accent transition-colors"
+            className="flex items-center gap-2 group"
           >
-            AKM Muntasir
+            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center group-hover:bg-accent transition-colors">
+              <Camera className="h-6 w-6 text-white" />
+            </div>
+            <span className="text-lg font-bold text-primary" style={{ fontFamily: 'Georgia, serif' }}>
+              Sifat Photography
+            </span>
           </button>
 
           {/* Desktop Navigation */}
@@ -54,12 +57,21 @@ const Navigation = () => {
               <button
                 key={link.href}
                 onClick={() => scrollToSection(link.href)}
-                className="text-foreground hover:text-accent transition-colors font-medium"
+                className="text-foreground hover:text-accent transition-colors font-medium relative group"
               >
                 {link.label}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300" />
               </button>
             ))}
           </div>
+
+          {/* Contact Button */}
+          <button
+            onClick={() => scrollToSection("contact")}
+            className="hidden md:block px-6 py-2 border-2 border-primary hover:bg-primary hover:text-primary-foreground rounded-full font-semibold transition-all"
+          >
+            Contact Us
+          </button>
 
           {/* Mobile Menu Button */}
           <Button
@@ -74,7 +86,7 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 space-y-4">
+          <div className="md:hidden mt-4 pb-4 space-y-4 border-t border-border pt-4">
             {navLinks.map((link) => (
               <button
                 key={link.href}
@@ -84,6 +96,12 @@ const Navigation = () => {
                 {link.label}
               </button>
             ))}
+            <button
+              onClick={() => scrollToSection("contact")}
+              className="w-full text-left px-6 py-2 border-2 border-primary hover:bg-primary hover:text-primary-foreground rounded-full font-semibold transition-all"
+            >
+              Contact Us
+            </button>
           </div>
         )}
       </div>

@@ -1,80 +1,94 @@
+import { ArrowRight } from "lucide-react";
 import photo1 from "@/assets/photo-1.jpg";
 import photo2 from "@/assets/photo-2.jpg";
 import photo3 from "@/assets/photo-3.jpg";
 import photo4 from "@/assets/photo-4.jpg";
 
 const Gallery = () => {
-  const photos = [
-    {
-      src: photo1,
-      alt: "Tea by the sea at sunset - Golden hour photography",
-      title: "Tea by the Sea",
-      category: "Lifestyle",
-    },
-    {
-      src: photo2,
-      alt: "Lush greenery with sunlight - Nature photography",
-      title: "Nature's Embrace",
-      category: "Nature",
-    },
-    {
-      src: photo3,
-      alt: "Sparkling ocean at golden hour - Seascape photography",
-      title: "Sea Sunshine",
-      category: "Seascape",
-    },
-    {
-      src: photo4,
-      alt: "Urban street at dusk - Street photography",
-      title: "Urban Dusk",
-      category: "Urban",
-    },
-  ];
-
   return (
-    <section id="gallery" className="py-20 px-4 bg-secondary/30">
+    <section id="gallery" className="py-20 px-4 bg-muted">
       <div className="container mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">Photography Gallery</h2>
-          <div className="w-20 h-1 bg-accent mx-auto mb-4" />
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Capturing meaningful moments and beautiful stories through the lens
+        {/* Featured Work Title */}
+        <div className="mb-16">
+          <h2 className="text-5xl md:text-6xl font-bold text-primary mb-4" style={{ fontFamily: 'Georgia, serif' }}>
+            My All Latest<br />Featured Work
+          </h2>
+          <p className="text-lg text-foreground max-w-2xl leading-relaxed mb-6">
+            Let's take your photograph to the next level. See real wonderful and beautiful moment of your life<br />
+            Let's take your photograph.
           </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {photos.map((photo, index) => (
-            <div
-              key={index}
-              className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 aspect-[3/4]"
-            >
-              <img
-                src={photo.src}
-                alt={photo.alt}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                  <p className="text-sm font-medium text-accent mb-1">{photo.category}</p>
-                  <h3 className="text-xl font-bold">{photo.title}</h3>
-                </div>
+          
+          {/* View Portfolio Badge */}
+          <button className="group relative inline-block">
+            <div className="relative flex items-center justify-center w-32 h-32 rounded-full border-4 border-primary hover:border-accent transition-all duration-300">
+              <div className="absolute inset-0 flex items-center justify-center">
+                <svg className="w-full h-full -rotate-90" viewBox="0 0 128 128">
+                  <path
+                    id="circlePathGallery"
+                    d="M 64, 64 m -48, 0 a 48,48 0 1,1 96,0 a 48,48 0 1,1 -96,0"
+                    fill="none"
+                  />
+                  <text className="text-[10px] fill-primary font-semibold tracking-wider">
+                    <textPath href="#circlePathGallery" startOffset="0%">
+                      SEE FEATURED • SEE FEATURED •
+                    </textPath>
+                  </text>
+                </svg>
               </div>
+              <ArrowRight className="h-6 w-6 text-primary group-hover:text-accent group-hover:translate-x-1 transition-all" />
             </div>
-          ))}
+          </button>
         </div>
 
-        <div className="text-center mt-12">
-          <p className="text-muted-foreground">
-            More photos available on{" "}
-            <a
-              href="https://www.instagram.com/muntasir_shawon?igsh=MTEwODQyNWNuc216Nw=="
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-accent hover:underline font-medium"
-            >
-              Instagram
-            </a>
-          </p>
+        {/* Photo Grid with Tilted Frames */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-5xl mx-auto">
+          {/* Photo 1 - Tilted left with coral background */}
+          <div className="relative group">
+            <div className="absolute -inset-4 bg-coral rounded-3xl transform -rotate-6 group-hover:rotate-0 transition-transform duration-500" />
+            <div className="relative bg-background p-4 rounded-2xl shadow-2xl transform group-hover:scale-105 transition-all duration-500">
+              <img
+                src={photo1}
+                alt="Tea by the sea at sunset"
+                className="w-full h-80 object-cover rounded-xl"
+              />
+            </div>
+          </div>
+
+          {/* Photo 2 - Tilted right with yellow background */}
+          <div className="relative group mt-12">
+            <div className="absolute -inset-4 bg-accent rounded-3xl transform rotate-6 group-hover:rotate-0 transition-transform duration-500" />
+            <div className="relative bg-background p-4 rounded-2xl shadow-2xl transform group-hover:scale-105 transition-all duration-500">
+              <img
+                src={photo2}
+                alt="Lush greenery with sunlight"
+                className="w-full h-80 object-cover rounded-xl"
+              />
+            </div>
+          </div>
+
+          {/* Photo 3 - Tilted left with yellow background */}
+          <div className="relative group -mt-8">
+            <div className="absolute -inset-4 bg-accent rounded-3xl transform -rotate-3 group-hover:rotate-0 transition-transform duration-500" />
+            <div className="relative bg-background p-4 rounded-2xl shadow-2xl transform group-hover:scale-105 transition-all duration-500">
+              <img
+                src={photo3}
+                alt="Sparkling ocean at golden hour"
+                className="w-full h-80 object-cover rounded-xl"
+              />
+            </div>
+          </div>
+
+          {/* Photo 4 - Tilted right with coral background */}
+          <div className="relative group mt-4">
+            <div className="absolute -inset-4 bg-coral rounded-3xl transform rotate-3 group-hover:rotate-0 transition-transform duration-500" />
+            <div className="relative bg-background p-4 rounded-2xl shadow-2xl transform group-hover:scale-105 transition-all duration-500">
+              <img
+                src={photo4}
+                alt="Urban street at dusk"
+                className="w-full h-80 object-cover rounded-xl"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>

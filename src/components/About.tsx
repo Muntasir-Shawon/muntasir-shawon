@@ -1,41 +1,63 @@
-import { GraduationCap, MapPin } from "lucide-react";
+import { GraduationCap, MapPin, Code2 } from "lucide-react";
 
 const About = () => {
   return (
-    <section id="about" className="py-20 px-4 bg-secondary/30">
-      <div className="container mx-auto max-w-4xl">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">About Me</h2>
-          <div className="w-20 h-1 bg-accent mx-auto" />
-        </div>
+    <section id="about" className="py-20 px-4 bg-background">
+      <div className="container mx-auto max-w-6xl">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left Side - Text Content */}
+          <div className="space-y-6">
+            <h2 className="text-5xl md:text-6xl font-bold text-primary" style={{ fontFamily: 'Georgia, serif' }}>
+              About Me
+            </h2>
+            <div className="w-24 h-1 bg-accent" />
+            
+            <div className="space-y-4 text-lg text-foreground leading-relaxed">
+              <p>
+                I'm <span className="font-bold text-primary">AKM Muntasir Uddin Shawon</span>, 
+                a passionate Computer Science & Engineering student combining the power of AI/ML 
+                with the art of photography.
+              </p>
 
-        <div className="space-y-6 text-lg text-foreground">
-          <p className="leading-relaxed">
-            I'm <span className="font-semibold text-primary">AKM Muntasir Uddin Shawon</span>, 
-            a passionate Computer Science & Engineering student at North South University with a 
-            deep interest in Artificial Intelligence, Machine Learning, and Large Language Models.
-          </p>
+              <p>
+                My work bridges technology and creativity—building intelligent systems that solve 
+                real problems while capturing visual stories that move people.
+              </p>
 
-          <p className="leading-relaxed">
-            My journey combines technical expertise with creative expression. Through AI/ML, I build 
-            intelligent systems that solve real-world problems, while photography allows me to capture 
-            meaningful moments and visual stories that resonate with people.
-          </p>
-
-          <p className="leading-relaxed">
-            What drives me is the intersection of technology and creativity—using cutting-edge AI to 
-            automate and enhance processes, while maintaining the human touch through thoughtful design 
-            and artistic vision.
-          </p>
-
-          <div className="flex flex-wrap gap-6 pt-6">
-            <div className="flex items-center gap-2 text-muted-foreground">
-              <GraduationCap className="h-5 w-5 text-accent" />
-              <span>BSc in CSE, North South University (Expected 2026)</span>
+              <div className="flex flex-wrap gap-4 pt-4">
+                <div className="flex items-center gap-2 px-4 py-2 bg-accent/10 rounded-full">
+                  <GraduationCap className="h-5 w-5 text-accent" />
+                  <span className="text-sm font-medium">CSE Student, NSU</span>
+                </div>
+                <div className="flex items-center gap-2 px-4 py-2 bg-coral/10 rounded-full">
+                  <MapPin className="h-5 w-5 text-coral" />
+                  <span className="text-sm font-medium">Dhaka, Bangladesh</span>
+                </div>
+                <div className="flex items-center gap-2 px-4 py-2 bg-accent/10 rounded-full">
+                  <Code2 className="h-5 w-5 text-accent" />
+                  <span className="text-sm font-medium">AI/ML Developer</span>
+                </div>
+              </div>
             </div>
-            <div className="flex items-center gap-2 text-muted-foreground">
-              <MapPin className="h-5 w-5 text-accent" />
-              <span>Dhaka, Bangladesh</span>
+          </div>
+
+          {/* Right Side - Feature Cards */}
+          <div className="grid grid-cols-2 gap-4">
+            <div className="bg-accent p-6 rounded-2xl text-center transform hover:scale-105 transition-all">
+              <div className="text-4xl font-bold text-primary mb-2">5+</div>
+              <div className="text-sm text-accent-foreground font-medium">Years Experience</div>
+            </div>
+            <div className="bg-coral p-6 rounded-2xl text-center transform hover:scale-105 transition-all mt-8">
+              <div className="text-4xl font-bold text-white mb-2">50+</div>
+              <div className="text-sm text-white font-medium">Projects Done</div>
+            </div>
+            <div className="bg-primary p-6 rounded-2xl text-center transform hover:scale-105 transition-all -mt-4">
+              <div className="text-4xl font-bold text-accent mb-2">AI/ML</div>
+              <div className="text-sm text-white font-medium">Specialist</div>
+            </div>
+            <div className="bg-muted p-6 rounded-2xl text-center transform hover:scale-105 transition-all mt-4">
+              <div className="text-4xl font-bold text-primary mb-2">100%</div>
+              <div className="text-sm text-foreground font-medium">Dedication</div>
             </div>
           </div>
         </div>

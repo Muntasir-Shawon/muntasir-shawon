@@ -1,120 +1,81 @@
-import { ExternalLink, Brain, TrendingUp } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import aiProjectBg from "@/assets/ai-project-bg.jpg";
+import { Brain, TrendingUp, Sparkles } from "lucide-react";
 
 const Projects = () => {
   const projects = [
     {
       icon: Brain,
-      title: "AI Fitness & Nutrition Tracking System",
+      title: "AI Fitness Tracker",
       description:
-        "An interactive chatbot system designed for comprehensive fitness and nutritional tracking. Leverages machine learning and large language models to provide personalized health recommendations and insights.",
-      technologies: [
-        "Python",
-        "LangChain",
-        "deepseek API",
-        "Streamlit",
-        "Machine Learning",
-        "LLMs",
-      ],
-      features: [
-        "Interactive AI chatbot interface",
-        "Personalized fitness tracking",
-        "Nutritional analysis and recommendations",
-        "Real-time data visualization",
-      ],
-      gradient: "from-accent/10 to-transparent",
+        "Interactive chatbot for fitness and nutrition tracking using ML, LLMs, and Streamlit.",
+      tech: ["Python", "LangChain", "ML", "Streamlit"],
+      color: "accent",
     },
     {
       icon: TrendingUp,
-      title: "Life Satisfaction Prediction using ML & XAI",
+      title: "Life Satisfaction ML",
       description:
-        "A predictive analytics system that estimates life satisfaction scores based on socioeconomic and lifestyle data. Incorporates Explainable AI techniques to provide transparent insights into prediction factors.",
-      technologies: [
-        "Python",
-        "Machine Learning",
-        "Explainable AI (XAI)",
-        "Data Visualization",
-        "Predictive Analytics",
-      ],
-      features: [
-        "Socioeconomic data analysis",
-        "Life satisfaction prediction",
-        "Explainable AI insights",
-        "Interactive data visualizations",
-      ],
-      gradient: "from-coral/10 to-transparent",
+        "Predictive analytics for life satisfaction using Explainable AI and data visualization.",
+      tech: ["Python", "ML", "XAI", "Data Viz"],
+      color: "coral",
     },
   ];
 
   return (
-    <section id="projects" className="py-20 px-4">
+    <section id="projects" className="py-20 px-4 bg-background">
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">Featured Projects</h2>
-          <div className="w-20 h-1 bg-accent mx-auto mb-4" />
+          <h2 className="text-5xl md:text-6xl font-bold text-primary mb-4" style={{ fontFamily: 'Georgia, serif' }}>
+            AI/ML Projects
+          </h2>
+          <div className="w-32 h-1 bg-accent mx-auto mb-6" />
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Innovative AI/ML solutions solving real-world problems
+            Innovative solutions combining machine learning with real-world applications
           </p>
         </div>
 
-        <div className="space-y-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {projects.map((project, index) => {
             const Icon = project.icon;
+            const bgColor = project.color === "accent" ? "bg-accent/10" : "bg-coral/10";
+            const iconColor = project.color === "accent" ? "text-accent" : "text-coral";
+            const borderColor = project.color === "accent" ? "border-accent" : "border-coral";
+            
             return (
               <div
                 key={index}
-                className={`bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-border`}
+                className={`${bgColor} border-2 ${borderColor} rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 group`}
               >
-                <div className="grid grid-cols-1 lg:grid-cols-3">
-                  <div
-                    className={`lg:col-span-1 p-8 bg-gradient-to-br ${project.gradient} flex items-center justify-center relative overflow-hidden`}
-                  >
-                    <div className="absolute inset-0 opacity-5">
-                      <img src={aiProjectBg} alt="" className="w-full h-full object-cover" />
-                    </div>
-                    <div className="relative z-10 text-center">
-                      <div className="inline-block p-6 bg-background rounded-2xl shadow-lg mb-4">
-                        <Icon className="h-12 w-12 text-accent" />
-                      </div>
-                    </div>
+                <div className="flex items-start gap-4 mb-6">
+                  <div className={`p-4 bg-background rounded-xl ${iconColor}`}>
+                    <Icon className="h-8 w-8" />
                   </div>
-
-                  <div className="lg:col-span-2 p-8">
-                    <h3 className="text-2xl font-bold text-primary mb-3">{project.title}</h3>
-                    <p className="text-foreground leading-relaxed mb-6">{project.description}</p>
-
-                    <div className="mb-6">
-                      <h4 className="font-semibold text-primary mb-3">Key Features:</h4>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                        {project.features.map((feature, featureIndex) => (
-                          <div key={featureIndex} className="flex items-start gap-2">
-                            <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2" />
-                            <span className="text-sm text-foreground">{feature}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div className="mb-6">
-                      <h4 className="font-semibold text-primary mb-3">Technologies Used:</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {project.technologies.map((tech, techIndex) => (
-                          <span
-                            key={techIndex}
-                            className="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm font-medium"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-
-                    <Button variant="outline" className="group">
-                      View Details
-                      <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                    </Button>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-primary mb-2" style={{ fontFamily: 'Georgia, serif' }}>
+                      {project.title}
+                    </h3>
                   </div>
+                </div>
+
+                <p className="text-foreground leading-relaxed mb-6">
+                  {project.description}
+                </p>
+
+                <div className="flex flex-wrap gap-2">
+                  {project.tech.map((tech, techIndex) => (
+                    <span
+                      key={techIndex}
+                      className={`px-3 py-1 ${project.color === "accent" ? "bg-accent" : "bg-coral"} ${project.color === "accent" ? "text-accent-foreground" : "text-white"} rounded-full text-xs font-semibold`}
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="mt-6 pt-6 border-t border-border">
+                  <button className="text-sm font-semibold text-primary hover:text-accent transition-colors inline-flex items-center gap-2 group">
+                    View Project Details
+                    <Sparkles className="h-4 w-4 group-hover:rotate-12 transition-transform" />
+                  </button>
                 </div>
               </div>
             );

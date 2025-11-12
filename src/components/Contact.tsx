@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Phone, Facebook, Instagram, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -16,7 +16,6 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Basic validation
     if (!formData.name || !formData.email || !formData.message) {
       toast({
         title: "Error",
@@ -26,15 +25,11 @@ const Contact = () => {
       return;
     }
 
-    // Here you would typically send the form data to a backend
-    console.log("Form submitted:", formData);
-    
     toast({
       title: "Message Sent!",
       description: "Thank you for reaching out. I'll get back to you soon.",
     });
 
-    // Reset form
     setFormData({ name: "", email: "", message: "" });
   };
 
@@ -48,130 +43,132 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 px-4">
-      <div className="container mx-auto max-w-4xl">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">Get In Touch</h2>
-          <div className="w-20 h-1 bg-accent mx-auto mb-4" />
-          <p className="text-lg text-muted-foreground">
-            Have a project in mind or want to collaborate? Let's connect!
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Contact Information */}
-          <div className="space-y-6">
+    <section id="contact" className="py-20 px-4 bg-muted relative">
+      <div className="container mx-auto max-w-6xl">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left Side - Contact Info */}
+          <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold text-primary mb-6">Contact Information</h3>
-              <div className="space-y-4">
-                <a
-                  href="mailto:muntasir.shawon78@gmail.com"
-                  className="flex items-center gap-3 text-foreground hover:text-accent transition-colors group"
-                >
-                  <div className="p-3 bg-accent/10 rounded-lg group-hover:bg-accent/20 transition-colors">
-                    <Mail className="h-5 w-5 text-accent" />
-                  </div>
-                  <span>muntasir.shawon78@gmail.com</span>
-                </a>
-
-                <a
-                  href="tel:01640856355"
-                  className="flex items-center gap-3 text-foreground hover:text-accent transition-colors group"
-                >
-                  <div className="p-3 bg-accent/10 rounded-lg group-hover:bg-accent/20 transition-colors">
-                    <Phone className="h-5 w-5 text-accent" />
-                  </div>
-                  <span>01640856355</span>
-                </a>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-bold text-primary mb-6">Follow Me</h3>
-              <div className="flex gap-4">
-                <a
-                  href="https://www.facebook.com/muntasir.shawon/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-3 bg-accent/10 rounded-lg hover:bg-accent hover:text-accent-foreground transition-colors group"
-                >
-                  <Facebook className="h-6 w-6 text-accent group-hover:text-accent-foreground" />
-                </a>
-                <a
-                  href="https://www.instagram.com/muntasir_shawon?igsh=MTEwODQyNWNuc216Nw=="
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-3 bg-coral/10 rounded-lg hover:bg-coral hover:text-coral-foreground transition-colors group"
-                >
-                  <Instagram className="h-6 w-6 text-coral group-hover:text-coral-foreground" />
-                </a>
-              </div>
-            </div>
-
-            <div className="p-6 bg-secondary/50 rounded-xl">
-              <p className="text-sm text-muted-foreground">
-                <span className="font-semibold text-primary">Location:</span> Dhaka, Bangladesh
-              </p>
-              <p className="text-sm text-muted-foreground mt-2">
-                Open to remote work and freelance opportunities
+              <h2 className="text-5xl md:text-6xl font-bold text-primary mb-6" style={{ fontFamily: 'Georgia, serif' }}>
+                Where Can You Find Me?
+              </h2>
+              <p className="text-lg text-foreground leading-relaxed mb-8">
+                It's take your photograph to the next level. See real wonderful and beautiful moment of your life<br />
+                It's take your photograph.
               </p>
             </div>
+
+            {/* Location Card */}
+            <div className="bg-yellow-light border-4 border-primary p-8 rounded-2xl shadow-lg transform rotate-2 hover:rotate-0 transition-transform duration-300">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center flex-shrink-0">
+                  <MapPin className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-primary text-lg mb-2">Studio Survey Area Road</h3>
+                  <p className="text-sm text-foreground">
+                    DADA Burdabad<br />
+                    Dhaka Bangladesh<br />
+                    1100
+                  </p>
+                </div>
+              </div>
+              <button className="mt-4 px-6 py-2 bg-primary text-primary-foreground rounded-full font-semibold hover:bg-accent hover:text-accent-foreground transition-all inline-flex items-center gap-2">
+                OPEN IN MAP
+                <ArrowRight className="h-4 w-4" />
+              </button>
+            </div>
+
+            {/* View Portfolio Badge */}
+            <button className="group relative inline-block">
+              <div className="relative flex items-center justify-center w-32 h-32 rounded-full border-4 border-primary hover:border-accent transition-all duration-300">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <svg className="w-full h-full -rotate-90" viewBox="0 0 128 128">
+                    <path
+                      id="circlePathContact"
+                      d="M 64, 64 m -48, 0 a 48,48 0 1,1 96,0 a 48,48 0 1,1 -96,0"
+                      fill="none"
+                    />
+                    <text className="text-[10px] fill-primary font-semibold tracking-wider">
+                      <textPath href="#circlePathContact" startOffset="0%">
+                        GET IN TOUCH • GET IN TOUCH •
+                      </textPath>
+                    </text>
+                  </svg>
+                </div>
+                <ArrowRight className="h-6 w-6 text-primary group-hover:text-accent group-hover:translate-x-1 transition-all" />
+              </div>
+            </button>
           </div>
 
-          {/* Contact Form */}
-          <div className="bg-card rounded-xl p-6 shadow-lg border border-border">
-            <h3 className="text-2xl font-bold text-primary mb-6">Send a Message</h3>
-            <form onSubmit={handleSubmit} className="space-y-4">
+          {/* Right Side - Contact Form */}
+          <div className="bg-background rounded-2xl p-8 shadow-xl border-2 border-border">
+            <h3 className="text-3xl font-bold text-primary mb-6" style={{ fontFamily: 'Georgia, serif' }}>
+              Send a Message
+            </h3>
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                  Name
-                </label>
                 <Input
-                  id="name"
                   name="name"
                   type="text"
                   value={formData.name}
                   onChange={handleChange}
-                  placeholder="Your name"
+                  placeholder="Your Name"
+                  className="h-12 border-2 border-border focus:border-accent rounded-xl"
                   required
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                  Email
-                </label>
                 <Input
-                  id="email"
                   name="email"
                   type="email"
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder="your.email@example.com"
+                  placeholder="Email Address"
+                  className="h-12 border-2 border-border focus:border-accent rounded-xl"
                   required
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                  Message
-                </label>
                 <Textarea
-                  id="message"
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  placeholder="Your message..."
+                  placeholder="Your Message..."
                   rows={5}
+                  className="border-2 border-border focus:border-accent rounded-xl resize-none"
                   required
                 />
               </div>
 
-              <Button type="submit" className="w-full bg-accent hover:bg-accent/90" size="lg">
+              <Button 
+                type="submit" 
+                className="w-full h-12 bg-accent hover:bg-accent/90 text-accent-foreground font-bold rounded-xl text-lg"
+                size="lg"
+              >
                 Send Message
                 <Send className="ml-2 h-5 w-5" />
               </Button>
             </form>
+
+            <div className="mt-8 pt-6 border-t border-border space-y-3">
+              <a
+                href="mailto:muntasir.shawon78@gmail.com"
+                className="flex items-center gap-3 text-foreground hover:text-accent transition-colors"
+              >
+                <Mail className="h-5 w-5" />
+                <span className="text-sm">muntasir.shawon78@gmail.com</span>
+              </a>
+              <a
+                href="tel:01640856355"
+                className="flex items-center gap-3 text-foreground hover:text-accent transition-colors"
+              >
+                <Phone className="h-5 w-5" />
+                <span className="text-sm">01640856355</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
