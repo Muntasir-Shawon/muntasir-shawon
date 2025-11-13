@@ -1,6 +1,5 @@
-import { ArrowRight, Sparkles, Camera } from "lucide-react";
+import { ArrowRight, Sparkles, Camera, Brain } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-image.jpg";
 
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
@@ -22,18 +21,21 @@ const Hero = () => {
           <div className="space-y-8 animate-fade-in relative z-10">
             <div className="space-y-4">
               <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-primary leading-tight" style={{ fontFamily: 'Georgia, serif' }}>
-                Capturing beauty photo
+                A.K.M. Muntasir Uddin Shawon
               </h1>
+              <p className="text-2xl md:text-3xl text-coral font-semibold" style={{ fontFamily: 'Georgia, serif' }}>
+                Blending Technology and Art
+              </p>
             </div>
             
             <p className="text-lg text-foreground max-w-lg leading-relaxed">
-              Let's take your photograph to the next level. Capturing your wonderful and beautiful moment of your life.
+              Building Intelligent Systems and Capturing Timeless Moments. AI/ML Developer & Creative Photographer crafting solutions that merge innovation with artistry.
             </p>
             
             {/* View Portfolio Badge */}
             <div className="flex items-center gap-6 pt-4">
               <button
-                onClick={() => scrollToSection("gallery")}
+                onClick={() => scrollToSection("projects")}
                 className="group relative"
               >
                 <div className="relative flex items-center justify-center w-40 h-40 rounded-full border-4 border-primary hover:border-accent transition-all duration-300">
@@ -60,7 +62,7 @@ const Hero = () => {
                 className="flex items-center gap-2 px-6 py-3 bg-accent hover:bg-accent/90 text-accent-foreground rounded-full font-semibold transition-all hover:scale-105"
               >
                 <Sparkles className="h-5 w-5" />
-                Demo Video
+                Contact Me
               </button>
             </div>
           </div>
@@ -70,30 +72,32 @@ const Hero = () => {
             {/* Decorative yellow blob */}
             <div className="absolute -top-10 -left-10 w-64 h-64 bg-accent rounded-[40%_60%_70%_30%/40%_50%_60%_50%] -z-10" />
             
-            {/* Main image container */}
+            {/* Main image container - Placeholder */}
             <div className="relative">
-              <img
-                src={heroImage}
-                alt="AKM Muntasir - Professional photographer and AI developer"
-                className="w-full h-auto object-cover rounded-3xl shadow-2xl relative z-10"
-              />
+              <div className="w-full h-[600px] bg-muted rounded-3xl shadow-2xl relative z-10 flex items-center justify-center">
+                <div className="text-center">
+                  <Camera className="h-24 w-24 text-muted-foreground mx-auto mb-6" />
+                  <p className="text-xl text-muted-foreground font-semibold">Upload Your Profile Image</p>
+                  <p className="text-sm text-muted-foreground mt-2">Showcase your professional & creative side</p>
+                </div>
+              </div>
               
               {/* Floating badges */}
               <div className="absolute -right-6 top-20 bg-coral p-4 rounded-2xl shadow-lg animate-float">
-                <Camera className="h-8 w-8 text-white" />
-                <p className="text-xs text-white font-semibold mt-2">Professional<br/>photo editor</p>
+                <Brain className="h-8 w-8 text-white" />
+                <p className="text-xs text-white font-semibold mt-2">AI/ML<br/>Developer</p>
               </div>
               
               <div className="absolute -left-6 top-1/2 bg-accent p-4 rounded-2xl shadow-lg animate-float" style={{ animationDelay: '0.5s' }}>
                 <div className="flex flex-col items-center">
                   <Sparkles className="h-6 w-6 text-primary" />
-                  <p className="text-xs text-primary font-semibold mt-2">5 years<br/>experience</p>
+                  <p className="text-xs text-primary font-semibold mt-2">CS&E<br/>Student</p>
                 </div>
               </div>
               
               <div className="absolute -right-8 bottom-20 bg-primary p-4 rounded-2xl shadow-lg animate-float" style={{ animationDelay: '1s' }}>
                 <Camera className="h-6 w-6 text-white" />
-                <p className="text-xs text-white font-semibold mt-2">Pro photographer</p>
+                <p className="text-xs text-white font-semibold mt-2">Creative<br/>Photographer</p>
               </div>
             </div>
 

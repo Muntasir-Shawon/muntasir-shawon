@@ -12,12 +12,12 @@ const Footer = () => {
                 <Camera className="h-6 w-6 text-primary" />
               </div>
               <span className="text-xl font-bold" style={{ fontFamily: 'Georgia, serif' }}>
-                AKM Muntasir
+                A.K.M. Muntasir
               </span>
             </div>
             <p className="text-sm opacity-80">
-              AI Developer & Photographer<br />
-              Building intelligent systems and capturing beautiful moments
+              Blending Technology and Art<br />
+              Building Intelligent Systems & Capturing Timeless Moments
             </p>
           </div>
 
@@ -67,7 +67,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-primary-foreground/20 pt-8 text-center text-sm opacity-70">
-          <p>© {new Date().getFullYear()} AKM Muntasir Uddin Shawon. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} A.K.M. Muntasir Uddin Shawon. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -14,14 +14,15 @@ const About = () => {
             
             <div className="space-y-4 text-lg text-foreground leading-relaxed">
               <p>
-                I'm <span className="font-bold text-primary">AKM Muntasir Uddin Shawon</span>, 
-                a passionate Computer Science & Engineering student combining the power of AI/ML 
-                with the art of photography.
+                I'm <span className="font-bold text-primary">A.K.M. Muntasir Uddin Shawon</span>, 
+                a Computer Science & Engineering student at North South University (expected 2026) with a passion for both 
+                cutting-edge technology and creative photography.
               </p>
 
               <p>
-                My work bridges technology and creativity—building intelligent systems that solve 
-                real problems while capturing visual stories that move people.
+                I specialize in developing intelligent systems using AI/ML, LLMs, and computer vision while 
+                capturing timeless moments through my lens. My unique perspective comes from blending technical 
+                precision with artistic vision.
               </p>
 
               <div className="flex flex-wrap gap-4 pt-4">
@@ -44,20 +45,20 @@ const About = () => {
           {/* Right Side - Feature Cards */}
           <div className="grid grid-cols-2 gap-4">
             <div className="bg-accent p-6 rounded-2xl text-center transform hover:scale-105 transition-all">
-              <div className="text-4xl font-bold text-primary mb-2">5+</div>
-              <div className="text-sm text-accent-foreground font-medium">Years Experience</div>
+              <div className="text-4xl font-bold text-primary mb-2">2026</div>
+              <div className="text-sm text-accent-foreground font-medium">Expected Graduation</div>
             </div>
             <div className="bg-coral p-6 rounded-2xl text-center transform hover:scale-105 transition-all mt-8">
-              <div className="text-4xl font-bold text-white mb-2">50+</div>
-              <div className="text-sm text-white font-medium">Projects Done</div>
+              <div className="text-4xl font-bold text-white mb-2">10+</div>
+              <div className="text-sm text-white font-medium">AI/ML Projects</div>
             </div>
             <div className="bg-primary p-6 rounded-2xl text-center transform hover:scale-105 transition-all -mt-4">
-              <div className="text-4xl font-bold text-accent mb-2">AI/ML</div>
+              <div className="text-4xl font-bold text-accent mb-2">LLMs</div>
               <div className="text-sm text-white font-medium">Specialist</div>
             </div>
             <div className="bg-muted p-6 rounded-2xl text-center transform hover:scale-105 transition-all mt-4">
-              <div className="text-4xl font-bold text-primary mb-2">100%</div>
-              <div className="text-sm text-foreground font-medium">Dedication</div>
+              <div className="text-4xl font-bold text-primary mb-2">NSU</div>
+              <div className="text-sm text-foreground font-medium">CS&E Student</div>
             </div>
           </div>
         </div>
