@@ -1,8 +1,4 @@
-import { ArrowRight } from "lucide-react";
-import photo1 from "@/assets/photo-1.jpg";
-import photo2 from "@/assets/photo-2.jpg";
-import photo3 from "@/assets/photo-3.jpg";
-import photo4 from "@/assets/photo-4.jpg";
+import { ArrowRight, Camera } from "lucide-react";
 
 const Gallery = () => {
   return (
@@ -11,11 +7,10 @@ const Gallery = () => {
         {/* Featured Work Title */}
         <div className="mb-16">
           <h2 className="text-5xl md:text-6xl font-bold text-primary mb-4" style={{ fontFamily: 'Georgia, serif' }}>
-            My All Latest<br />Featured Work
+            Photography<br />Portfolio
           </h2>
           <p className="text-lg text-foreground max-w-2xl leading-relaxed mb-6">
-            Let's take your photograph to the next level. See real wonderful and beautiful moment of your life<br />
-            Let's take your photograph.
+            Capturing timeless moments through a creative lens. A collection of my photographic work that tells stories and preserves memories with artistic vision and technical precision.
           </p>
           
           {/* View Portfolio Badge */}
@@ -40,53 +35,57 @@ const Gallery = () => {
           </button>
         </div>
 
-        {/* Photo Grid with Tilted Frames */}
+        {/* Photo Grid with Tilted Frames - Placeholder Images */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-5xl mx-auto">
-          {/* Photo 1 - Tilted left with coral background */}
+          {/* Photo 1 - Placeholder */}
           <div className="relative group">
             <div className="absolute -inset-4 bg-coral rounded-3xl transform -rotate-6 group-hover:rotate-0 transition-transform duration-500" />
             <div className="relative bg-background p-4 rounded-2xl shadow-2xl transform group-hover:scale-105 transition-all duration-500">
-              <img
-                src={photo1}
-                alt="Tea by the sea at sunset"
-                className="w-full h-80 object-cover rounded-xl"
-              />
+              <div className="w-full h-80 bg-muted rounded-xl flex items-center justify-center">
+                <div className="text-center">
+                  <Camera className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
+                  <p className="text-sm text-muted-foreground">Upload Your Photo</p>
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Photo 2 - Tilted right with yellow background */}
+          {/* Photo 2 - Placeholder */}
           <div className="relative group mt-12">
             <div className="absolute -inset-4 bg-accent rounded-3xl transform rotate-6 group-hover:rotate-0 transition-transform duration-500" />
             <div className="relative bg-background p-4 rounded-2xl shadow-2xl transform group-hover:scale-105 transition-all duration-500">
-              <img
-                src={photo2}
-                alt="Lush greenery with sunlight"
-                className="w-full h-80 object-cover rounded-xl"
-              />
+              <div className="w-full h-80 bg-muted rounded-xl flex items-center justify-center">
+                <div className="text-center">
+                  <Camera className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
+                  <p className="text-sm text-muted-foreground">Upload Your Photo</p>
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Photo 3 - Tilted left with yellow background */}
+          {/* Photo 3 - Placeholder */}
           <div className="relative group -mt-8">
             <div className="absolute -inset-4 bg-accent rounded-3xl transform -rotate-3 group-hover:rotate-0 transition-transform duration-500" />
             <div className="relative bg-background p-4 rounded-2xl shadow-2xl transform group-hover:scale-105 transition-all duration-500">
-              <img
-                src={photo3}
-                alt="Sparkling ocean at golden hour"
-                className="w-full h-80 object-cover rounded-xl"
-              />
+              <div className="w-full h-80 bg-muted rounded-xl flex items-center justify-center">
+                <div className="text-center">
+                  <Camera className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
+                  <p className="text-sm text-muted-foreground">Upload Your Photo</p>
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Photo 4 - Tilted right with coral background */}
+          {/* Photo 4 - Placeholder */}
           <div className="relative group mt-4">
             <div className="absolute -inset-4 bg-coral rounded-3xl transform rotate-3 group-hover:rotate-0 transition-transform duration-500" />
             <div className="relative bg-background p-4 rounded-2xl shadow-2xl transform group-hover:scale-105 transition-all duration-500">
-              <img
-                src={photo4}
-                alt="Urban street at dusk"
-                className="w-full h-80 object-cover rounded-xl"
-              />
+              <div className="w-full h-80 bg-muted rounded-xl flex items-center justify-center">
+                <div className="text-center">
+                  <Camera className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
+                  <p className="text-sm text-muted-foreground">Upload Your Photo</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

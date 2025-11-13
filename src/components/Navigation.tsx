@@ -25,9 +25,9 @@ const Navigation = () => {
 
   const navLinks = [
     { label: "Home", href: "hero" },
-    { label: "Portfolio", href: "gallery" },
-    { label: "Features", href: "services" },
-    { label: "Blog", href: "projects" },
+    { label: "Portfolio", href: "projects" },
+    { label: "Photography", href: "gallery" },
+    { label: "Blog", href: "blog" },
   ];
 
   return (
@@ -47,7 +47,7 @@ const Navigation = () => {
               <Camera className="h-6 w-6 text-white" />
             </div>
             <span className="text-lg font-bold text-primary" style={{ fontFamily: 'Georgia, serif' }}>
-              Sifat Photography
+              A.K.M. Muntasir
             </span>
           </button>
 
@@ -70,7 +70,7 @@ const Navigation = () => {
             onClick={() => scrollToSection("contact")}
             className="hidden md:block px-6 py-2 border-2 border-primary hover:bg-primary hover:text-primary-foreground rounded-full font-semibold transition-all"
           >
-            Contact Us
+            Contact
           </button>
 
           {/* Mobile Menu Button */}
@@ -100,7 +100,7 @@ const Navigation = () => {
               onClick={() => scrollToSection("contact")}
               className="w-full text-left px-6 py-2 border-2 border-primary hover:bg-primary hover:text-primary-foreground rounded-full font-semibold transition-all"
             >
-              Contact Us
+              Contact
             </button>
           </div>
         )}
