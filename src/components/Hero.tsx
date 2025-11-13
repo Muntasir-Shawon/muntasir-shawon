@@ -1,5 +1,6 @@
 import { ArrowRight, Sparkles, Camera, Brain } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import profilePhoto from "@/assets/profile-photo.png";
 
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
@@ -72,14 +73,14 @@ const Hero = () => {
             {/* Decorative yellow blob */}
             <div className="absolute -top-10 -left-10 w-64 h-64 bg-accent rounded-[40%_60%_70%_30%/40%_50%_60%_50%] -z-10" />
             
-            {/* Main image container - Placeholder */}
+            {/* Main image container - Profile Photo */}
             <div className="relative">
-              <div className="w-full h-[600px] bg-muted rounded-3xl shadow-2xl relative z-10 flex items-center justify-center">
-                <div className="text-center">
-                  <Camera className="h-24 w-24 text-muted-foreground mx-auto mb-6" />
-                  <p className="text-xl text-muted-foreground font-semibold">Upload Your Profile Image</p>
-                  <p className="text-sm text-muted-foreground mt-2">Showcase your professional & creative side</p>
-                </div>
+              <div className="w-full h-[600px] rounded-3xl shadow-2xl relative z-10 overflow-hidden">
+                <img 
+                  src={profilePhoto} 
+                  alt="A.K.M. Muntasir Uddin Shawon - Profile Photo" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               
               {/* Floating badges */}
