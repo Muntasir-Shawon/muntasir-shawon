@@ -58,7 +58,7 @@ const About = () => {
             </div>
             <div className="bg-muted p-6 rounded-2xl text-center transform hover:scale-105 transition-all mt-4">
               <div className="text-4xl font-bold text-primary mb-2">NSU</div>
-              <div className="text-sm text-foreground font-medium">CS&E Student</div>
+              <div className="text-sm text-foreground font-medium">CSE Student</div>
             </div>
           </div>
         </div>
