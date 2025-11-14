@@ -1,20 +1,20 @@
 import { GraduationCap, MapPin, Code2 } from "lucide-react";
-
 const About = () => {
-  return (
-    <section id="about" className="py-20 px-4 bg-background">
+  return <section id="about" className="py-20 px-4 bg-background">
       <div className="container mx-auto max-w-6xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Side - Text Content */}
           <div className="space-y-6">
-            <h2 className="text-5xl md:text-6xl font-bold text-primary" style={{ fontFamily: 'Georgia, serif' }}>
+            <h2 className="text-5xl md:text-6xl font-bold text-primary" style={{
+            fontFamily: 'Georgia, serif'
+          }}>
               About Me
             </h2>
             <div className="w-24 h-1 bg-accent" />
             
             <div className="space-y-4 text-lg text-foreground leading-relaxed">
               <p>
-                I'm <span className="font-bold text-primary">A.K.M. Muntasir Uddin Shawon</span>, 
+                I'm A.K.M. Muntasir Uddin Shawon, a Computer Science & Engineering student at North South University with a passion for both cutting-edge technology and creative photography. <span className="font-bold text-primary">A.K.M. Muntasir Uddin Shawon</span>, 
                 a Computer Science & Engineering student at North South University (expected 2026) with a passion for both 
                 cutting-edge technology and creative photography.
               </p>
@@ -63,8 +63,6 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
