@@ -1,5 +1,5 @@
-﻿import { useState } from "react";
-import { Github, ExternalLink, Sparkles, Brain, Code2, Database, ArrowUpRight, FolderGit2 } from "lucide-react";
+import { useState } from "react";
+import { Github, ExternalLink, Sparkles, Brain, Code2, Database, ArrowUpRight, Dumbbell } from "lucide-react";
 
 interface Project {
   id: string;
@@ -17,6 +17,17 @@ const Projects = () => {
   const [filter, setFilter] = useState<string>("all");
 
   const projects: Project[] = [
+    {
+      id: "fitnut-system",
+      title: "FitNut — Fitness & Nutrition Ecosystem",
+      category: "full-stack",
+      description:
+        "Cross-platform fitness and nutrition management suite featuring a LangChain AI Assistant for dynamic meal planning, macro computation, personalized workout scheduling, and progress tracking.",
+      tags: ["React Native", "Expo", "Node.js", "Express", "MySQL", "LangChain", "AI Chatbot"],
+      githubUrl: "https://github.com/Muntasir-Shawon/FitNut-Fitness-Nutrition-System",
+      featured: true,
+      icon: <Dumbbell className="w-5 h-5 text-emerald-400" />,
+    },
     {
       id: "interviewmate-ai",
       title: "InterviewMate-AI",
@@ -48,7 +59,7 @@ const Projects = () => {
         "Modern, responsive personal portfolio blending software engineering showcase with artistic photography curation and interactive lightboxes.",
       tags: ["TypeScript", "React 18", "Tailwind CSS", "Vite"],
       githubUrl: "https://github.com/Muntasir-Shawon/muntasir-shawon",
-      liveUrl: "https://muntasir-shawon.lovable.app",
+      liveUrl: "https://muntasir-shawon.github.io/muntasir-shawon/",
       featured: true,
       icon: <Code2 className="w-5 h-5 text-rose-400" />,
     },
@@ -61,29 +72,7 @@ const Projects = () => {
       tags: ["Python", "EDA", "Pandas", "Matplotlib", "Seaborn"],
       githubUrl: "https://github.com/Muntasir-Shawon/Covid-19-data-analysis",
       featured: false,
-      icon: <Database className="w-5 h-5 text-emerald-400" />,
-    },
-    {
-      id: "cpp-algorithms",
-      title: "C/C++ Algorithmic Suite",
-      category: "data-cpp",
-      description:
-        "Core computer science problem-solving repository featuring data structures, algorithmic complexity optimization, and academic programming implementations.",
-      tags: ["C++", "C", "Data Structures", "Algorithms", "OOP"],
-      githubUrl: "https://github.com/Muntasir-Shawon/c-cpp-practice-programs",
-      featured: false,
-      icon: <FolderGit2 className="w-5 h-5 text-amber-400" />,
-    },
-    {
-      id: "responsive-web",
-      title: "Responsive Web Architectures",
-      category: "full-stack",
-      description:
-        "Modern cross-platform responsive layouts focusing on mobile-first design, semantic HTML5, CSS animations, and UI/UX best practices.",
-      tags: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
-      githubUrl: "https://github.com/Muntasir-Shawon/responsive-website-project",
-      featured: false,
-      icon: <Code2 className="w-5 h-5 text-purple-400" />,
+      icon: <Database className="w-5 h-5 text-amber-400" />,
     },
   ];
 
@@ -112,9 +101,9 @@ const Projects = () => {
         <div className="flex flex-wrap justify-center gap-2 mb-12">
           {[
             { id: "all", label: "All Projects" },
+            { id: "full-stack", label: "Full-Stack & Mobile" },
             { id: "ai-ml", label: "AI & Machine Learning" },
-            { id: "full-stack", label: "Full-Stack Web" },
-            { id: "data-cpp", label: "Data Science & C++" },
+            { id: "data-cpp", label: "Data Science & Analytics" },
           ].map((tab) => (
             <button
               key={tab.id}

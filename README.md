@@ -1,4 +1,4 @@
-﻿<div align="center">
+<div align="center">
 
 <!-- Hero Section -->
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=1,12,24,31&height=220&section=header&text=A.K.M.%20Muntasir%20Shawon&fontSize=42&fontAlignY=35&desc=AI%2FML%20Developer%20%E2%80%A2%20Full-Stack%20Engineer%20%E2%80%A2%20Photographer&descFontSize=18&descAlignY=58&animation=fadeIn&fontColor=ffffff" width="100%" alt="Header Banner" />
@@ -81,7 +81,7 @@
 
 <div align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=python,ts,js,cpp,c,mysql,fastapi,react,nodejs,tailwind,vite,html,css,git,github,vscode,postman&perline=9" alt="My Tech Stack" />
+    <img src="https://skillicons.dev/icons?i=python,ts,js,react,nodejs,express,mysql,fastapi,tailwind,vite,html,css,cpp,c,git,github,vscode,postman&perline=9" alt="My Tech Stack" />
   </a>
 </div>
 
@@ -92,25 +92,32 @@
 <table>
   <tr>
     <td width="50%" valign="top">
+      <h3>🏋️‍♂️ <a href="https://github.com/Muntasir-Shawon/FitNut-Fitness-Nutrition-System">FitNut — Fitness & Nutrition Ecosystem</a></h3>
+      <p>Cross-platform fitness & nutrition management suite featuring a <b>LangChain AI Assistant</b> for dynamic meal planning, macro computation, exercise scheduling, and progress tracking.</p>
+      <p><code>React Native</code> <code>Expo</code> <code>Node.js</code> <code>Express</code> <code>MySQL</code> <code>LangChain</code> <code>AI Chatbot</code></p>
+    </td>
+    <td width="50%" valign="top">
       <h3>🤖 <a href="https://github.com/Muntasir-Shawon/InterviewMate-AI">InterviewMate-AI</a></h3>
       <p>AI-powered interview preparation platform featuring intelligent CV parsing, ATS scoring algorithm, and contextual interview questions powered by <b>Gemini AI</b> & <b>FastAPI</b>.</p>
-      <p><code>FastAPI</code> <code>Gemini AI</code> <code>TypeScript</code> <code>React</code> <code>Tailwind</code></p>
+      <p><code>FastAPI</code> <code>Gemini AI</code> <code>TypeScript</code> <code>React</code> <code>Tailwind CSS</code></p>
     </td>
+  </tr>
+  <tr>
     <td width="50%" valign="top">
       <h3>🧠 <a href="https://github.com/Muntasir-Shawon/Life-Satisfaction-prediction-using-Machine-Learning-and-Explainable-AI">Life Satisfaction Prediction (XAI)</a></h3>
       <p>Comprehensive machine learning pipeline predicting life satisfaction indices paired with <b>Explainable AI (XAI)</b> for model transparency and interpretability.</p>
       <p><code>Python</code> <code>Machine Learning</code> <code>XAI</code> <code>Scikit-Learn</code> <code>Pandas</code></p>
     </td>
-  </tr>
-  <tr>
     <td width="50%" valign="top">
       <h3>🌐 <a href="https://github.com/Muntasir-Shawon/muntasir-shawon">Creative Portfolio & Gallery</a></h3>
       <p>Modern, responsive personal portfolio blending software engineering showcase with artistic photography curation and interactive lightboxes.</p>
       <p><code>TypeScript</code> <code>React 18</code> <code>Tailwind CSS</code> <code>Vite</code> <a href="https://muntasir-shawon.github.io/muntasir-shawon/">Live Demo ↗</a></p>
     </td>
-    <td width="50%" valign="top">
-      <h3>📊 <a href="https://github.com/Muntasir-Shawon/Covid-19-data-analysis">COVID-19 Data Analytics</a></h3>
-      <p>Exploratory data analysis uncovering epidemiological patterns, geographical infection curves, and statistical distributions.</p>
+  </tr>
+  <tr>
+    <td width="100%" colspan="2" valign="top">
+      <h3>📊 <a href="https://github.com/Muntasir-Shawon/Covid-19-data-analysis">COVID-19 Data Analytics & EDA</a></h3>
+      <p>Exploratory data analysis uncovering epidemiological patterns, geographical infection curves, and statistical distributions using Python.</p>
       <p><code>Python</code> <code>EDA</code> <code>Pandas</code> <code>Matplotlib</code> <code>Seaborn</code></p>
     </td>
   </tr>

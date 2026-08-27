@@ -1,4 +1,4 @@
-﻿import { useState } from "react";
+import { useState } from "react";
 import { Code2, Brain, Layout, Database, Wrench, Layers, Terminal, Sparkles } from "lucide-react";
 
 interface SkillCategory {
@@ -28,22 +28,22 @@ const Skills = () => {
       title: "AI, ML & Data Science",
       icon: <Brain className="w-5 h-5 text-indigo-400" />,
       skills: [
+        { name: "LangChain & LLMs", level: "Proficient", description: "Prompt engineering, Conversation memory, AI Agents", badge: "AI Agents" },
         { name: "FastAPI", level: "Proficient", description: "High-performance Python backend APIs", badge: "Backend AI" },
-        { name: "Gemini AI & LLMs", level: "Proficient", description: "Prompt engineering, Multimodal APIs", badge: "Generative AI" },
+        { name: "Gemini AI & LLMs", level: "Proficient", description: "Multimodal AI inference, Structured outputs", badge: "Generative AI" },
         { name: "Explainable AI (XAI)", level: "Proficient", description: "SHAP, LIME, Feature Importance", badge: "Research" },
         { name: "Scikit-Learn", level: "Proficient", description: "Classification, Regression, Pipelines", badge: "ML Core" },
         { name: "Pandas & NumPy", level: "Advanced", description: "Data Manipulation, Matrix Ops, Cleaning", badge: "Data Science" },
-        { name: "Matplotlib & Seaborn", level: "Proficient", description: "Statistical data visualization", badge: "Analytics" },
       ],
     },
     {
-      title: "Web & Frameworks",
+      title: "Web, Mobile & Backend",
       icon: <Layout className="w-5 h-5 text-rose-400" />,
       skills: [
-        { name: "React 18", level: "Proficient", description: "Hooks, Component Architecture, State", badge: "Frontend" },
-        { name: "Tailwind CSS", level: "Advanced", description: "Utility-first, Glassmorphism, Dark mode", badge: "Styling" },
+        { name: "React & React Native", level: "Proficient", description: "Cross-platform mobile (Expo) & web SPAs", badge: "Frontend / Mobile" },
+        { name: "Node.js & Express", level: "Proficient", description: "REST APIs, Middleware, Auth flows", badge: "Backend" },
+        { name: "Tailwind CSS", level: "Advanced", description: "Utility-first, Glassmorphism, Responsive design", badge: "Styling" },
         { name: "Vite", level: "Advanced", description: "Fast bundling, Modern dev ecosystem", badge: "Build Tool" },
-        { name: "Node.js & Express", level: "Intermediate", description: "REST APIs, Middleware, Auth flows", badge: "Backend" },
         { name: "Radix UI / Shadcn", level: "Proficient", description: "Accessible UI components & tokens", badge: "UI Library" },
       ],
     },
