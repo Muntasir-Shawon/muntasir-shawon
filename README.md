@@ -4,7 +4,7 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=1,12,24,31&height=220&section=header&text=A.K.M.%20Muntasir%20Shawon&fontSize=42&fontAlignY=35&desc=AI%2FML%20Developer%20%E2%80%A2%20Full-Stack%20Engineer%20%E2%80%A2%20Photographer&descFontSize=18&descAlignY=58&animation=fadeIn&fontColor=ffffff" width="100%" alt="Header Banner" />
 
 <p align="center">
-  <a href="https://muntasir-shawon.lovable.app"><img src="https://img.shields.io/badge/portfolio-muntasir--shawon.lovable.app-000000?style=for-the-badge&logo=safari&logoColor=38bdf8" alt="Portfolio" /></a>
+  <a href="https://muntasir-shawon.github.io/muntasir-shawon/"><img src="https://img.shields.io/badge/portfolio-muntasir--shawon.github.io-000000?style=for-the-badge&logo=safari&logoColor=38bdf8" alt="Live Portfolio" /></a>
   <a href="mailto:muntasir.shawon78@gmail.com"><img src="https://img.shields.io/badge/email-muntasir.shawon78%40gmail.com-000000?style=for-the-badge&logo=gmail&logoColor=ea4335" alt="Email" /></a>
   <a href="https://www.instagram.com/muntasir_shawon"><img src="https://img.shields.io/badge/instagram-%40muntasir__shawon-000000?style=for-the-badge&logo=instagram&logoColor=e4405f" alt="Instagram" /></a>
 </p>
@@ -17,6 +17,17 @@
 
 ---
 
+### 🌐 Live Portfolio & Interactive Hub
+
+<div align="center">
+  <a href="https://muntasir-shawon.github.io/muntasir-shawon/">
+    <img src="https://img.shields.io/badge/✨%20VISIT%20LIVE%20PORTFOLIO-https%3A%2F%2Fmuntasir--shawon.github.io%2Fmuntasir--shawon%2F-38BDF8?style=for-the-badge&logo=react&logoColor=white" alt="Visit Live Portfolio" />
+  </a>
+  <p><sub>Explore interactive AI/ML project showcases, research, and high-resolution photography exhibitions in a single web experience.</sub></p>
+</div>
+
+---
+
 ### 📷 Visual Storytelling & Photography
 
 > *"Capturing timeless moments through a creative lens — exploring mood, natural light, street narratives, and human portraits."*
@@ -25,25 +36,33 @@
   <table>
     <tr>
       <td width="25%" align="center">
-        <img src="https://raw.githubusercontent.com/Muntasir-Shawon/muntasir-shawon/main/src/assets/gallery/photo-1.jpg" width="100%" style="border-radius: 12px;" alt="Photography Frame 1" />
+        <a href="https://muntasir-shawon.github.io/muntasir-shawon/#gallery">
+          <img src="https://raw.githubusercontent.com/Muntasir-Shawon/muntasir-shawon/main/src/assets/gallery/photo-1.jpg" width="100%" style="border-radius: 12px;" alt="Photography Frame 1" />
+        </a>
         <br /><sub><b>Atmosphere & Mood</b></sub>
       </td>
       <td width="25%" align="center">
-        <img src="https://raw.githubusercontent.com/Muntasir-Shawon/muntasir-shawon/main/src/assets/gallery/photo-2.jpg" width="100%" style="border-radius: 12px;" alt="Photography Frame 2" />
+        <a href="https://muntasir-shawon.github.io/muntasir-shawon/#gallery">
+          <img src="https://raw.githubusercontent.com/Muntasir-Shawon/muntasir-shawon/main/src/assets/gallery/photo-2.jpg" width="100%" style="border-radius: 12px;" alt="Photography Frame 2" />
+        </a>
         <br /><sub><b>Portraits & Expression</b></sub>
       </td>
       <td width="25%" align="center">
-        <img src="https://raw.githubusercontent.com/Muntasir-Shawon/muntasir-shawon/main/src/assets/gallery/photo-3.jpg" width="100%" style="border-radius: 12px;" alt="Photography Frame 3" />
+        <a href="https://muntasir-shawon.github.io/muntasir-shawon/#gallery">
+          <img src="https://raw.githubusercontent.com/Muntasir-Shawon/muntasir-shawon/main/src/assets/gallery/photo-3.jpg" width="100%" style="border-radius: 12px;" alt="Photography Frame 3" />
+        </a>
         <br /><sub><b>Street & Perspective</b></sub>
       </td>
       <td width="25%" align="center">
-        <img src="https://raw.githubusercontent.com/Muntasir-Shawon/muntasir-shawon/main/src/assets/gallery/photo-4.jpg" width="100%" style="border-radius: 12px;" alt="Photography Frame 4" />
+        <a href="https://muntasir-shawon.github.io/muntasir-shawon/#gallery">
+          <img src="https://raw.githubusercontent.com/Muntasir-Shawon/muntasir-shawon/main/src/assets/gallery/photo-4.jpg" width="100%" style="border-radius: 12px;" alt="Photography Frame 4" />
+        </a>
         <br /><sub><b>Light & Composition</b></sub>
       </td>
     </tr>
   </table>
   <p align="center">
-    👉 Explore more of my visual work on <b><a href="https://www.instagram.com/muntasir_shawon">Instagram (@muntasir_shawon)</a></b> & <b><a href="https://muntasir-shawon.lovable.app">Visual Gallery</a></b>
+    👉 Explore more of my visual work on <b><a href="https://www.instagram.com/muntasir_shawon">Instagram (@muntasir_shawon)</a></b> & <b><a href="https://muntasir-shawon.github.io/muntasir-shawon/#gallery">Interactive Gallery</a></b>
   </p>
 </div>
 
@@ -54,7 +73,7 @@
 - 🎓 **Computer Science Undergraduate** at **North South University**, Dhaka, Bangladesh.
 - 🧠 Developing **AI/ML pipelines**, **Explainable AI (XAI)**, and **LLM-driven intelligent web applications**.
 - ⚡ Architecting full-stack web solutions with **FastAPI**, **React**, **TypeScript**, and **Tailwind CSS**.
-- 🌐 Explore my full portfolio & projects at **[muntasir-shawon.lovable.app](https://muntasir-shawon.lovable.app)**.
+- 🌐 Explore my full portfolio & projects live at **[muntasir-shawon.github.io/muntasir-shawon](https://muntasir-shawon.github.io/muntasir-shawon/)**.
 
 ---
 
@@ -86,8 +105,8 @@
   <tr>
     <td width="50%" valign="top">
       <h3>🌐 <a href="https://github.com/Muntasir-Shawon/muntasir-shawon">Creative Portfolio & Gallery</a></h3>
-      <p>Modern, responsive personal portfolio blending software engineering showcase with artistic photography curation.</p>
-      <p><code>TypeScript</code> <code>React</code> <code>Tailwind CSS</code> <code>Vite</code> <a href="https://muntasir-shawon.lovable.app">Live Demo ↗</a></p>
+      <p>Modern, responsive personal portfolio blending software engineering showcase with artistic photography curation and interactive lightboxes.</p>
+      <p><code>TypeScript</code> <code>React 18</code> <code>Tailwind CSS</code> <code>Vite</code> <a href="https://muntasir-shawon.github.io/muntasir-shawon/">Live Demo ↗</a></p>
     </td>
     <td width="50%" valign="top">
       <h3>📊 <a href="https://github.com/Muntasir-Shawon/Covid-19-data-analysis">COVID-19 Data Analytics</a></h3>
