@@ -1,78 +1,130 @@
-﻿import { useState } from "react";
-import { Camera, Instagram, Maximize2, X, Sparkles, ExternalLink, Eye } from "lucide-react";
-import photo1 from "@/assets/gallery/photo-1.jpg";
-import photo2 from "@/assets/gallery/photo-2.jpg";
-import photo3 from "@/assets/gallery/photo-3.jpg";
-import photo4 from "@/assets/gallery/photo-4.jpg";
+﻿import { useState, useMemo } from "react";
+import { Camera, Instagram, Maximize2, X, Sparkles, ExternalLink, Filter, Image as ImageIcon } from "lucide-react";
 
 interface PhotoItem {
-  id: number;
+  id: string;
   src: string;
   title: string;
   category: string;
   story: string;
   tag: string;
+  fileName: string;
 }
+
+// Dynamically import all images from the gallery directory
+const photoModules = import.meta.glob<{ default: string }>("@/assets/gallery/*.{jpg,jpeg,png,webp,avif}", {
+  eager: true,
+});
+
+const defaultMetadata: Record<string, { title: string; category: string; story: string; tag: string }> = {
+  "photo-1": {
+    title: "Atmosphere & Mood",
+    category: "Mood & Atmosphere",
+    story: "Exploring subtle tonal gradients and ambient environmental lighting.",
+    tag: "Natural Light",
+  },
+  "photo-2": {
+    title: "Portraits & Human Expression",
+    category: "Portraits",
+    story: "Focusing on authentic character, gaze, and depth of field.",
+    tag: "Portraiture",
+  },
+  "photo-3": {
+    title: "Street Narratives & Life",
+    category: "Street & Urban",
+    story: "Capturing fleeting candid moments and architectural geometry.",
+    tag: "Street Life",
+  },
+  "photo-4": {
+    title: "Light & Shadow Dynamics",
+    category: "Light & Composition",
+    story: "Playing with golden hour highlights and deliberate framing balance.",
+    tag: "Composition",
+  },
+};
 
 const Gallery = () => {
   const [selectedPhoto, setSelectedPhoto] = useState<PhotoItem | null>(null);
+  const [activeCategory, setActiveCategory] = useState<string>("All");
 
-  const photos: PhotoItem[] = [
-    {
-      id: 1,
-      src: photo1,
-      title: "Atmosphere & Mood",
-      category: "Cinematic Atmosphere",
-      story: "Exploring subtle tonal gradients and ambient environmental lighting.",
-      tag: "Natural Light",
-    },
-    {
-      id: 2,
-      src: photo2,
-      title: "Portraits & Expression",
-      category: "Human Emotion",
-      story: "Focusing on authentic character, gaze, and depth of field.",
-      tag: "Portraiture",
-    },
-    {
-      id: 3,
-      src: photo3,
-      title: "Street & Perspective",
-      category: "Urban Narratives",
-      story: "Capturing fleeting candid moments and architectural geometry.",
-      tag: "Street Life",
-    },
-    {
-      id: 4,
-      src: photo4,
-      title: "Light & Composition",
-      category: "Visual Aesthetics",
-      story: "Playing with golden hour highlights and deliberate framing balance.",
-      tag: "Composition",
-    },
-  ];
+  // Build the dynamic photos array from imported files
+  const photos: PhotoItem[] = useMemo(() => {
+    return Object.entries(photoModules).map(([path, module], index) => {
+      const fileNameWithExt = path.split("/").pop() || `photo-${index + 1}`;
+      const fileNameWithoutExt = fileNameWithExt.replace(/\.[^/.]+$/, "");
+      
+      const meta = defaultMetadata[fileNameWithoutExt] || {
+        title: `Capture #${index + 1}`,
+        category: index % 2 === 0 ? "Portraits" : "Street & Urban",
+        story: "Photographic composition capturing depth, light, and visual aesthetic.",
+        tag: "Photography",
+      };
+
+      return {
+        id: `photo-${index}`,
+        src: module.default,
+        title: meta.title,
+        category: meta.category,
+        story: meta.story,
+        tag: meta.tag,
+        fileName: fileNameWithExt,
+      };
+    });
+  }, []);
+
+  // Extract unique categories
+  const categories = useMemo(() => {
+    const set = new Set<string>(["All"]);
+    photos.forEach((p) => set.add(p.category));
+    return Array.from(set);
+  }, [photos]);
+
+  const filteredPhotos = useMemo(() => {
+    if (activeCategory === "All") return photos;
+    return photos.filter((p) => p.category === activeCategory);
+  }, [photos, activeCategory]);
 
   return (
     <section id="gallery" className="py-24 px-4 relative">
       <div className="container mx-auto max-w-6xl">
         
         {/* Section Header */}
-        <div className="text-center space-y-3 mb-14">
+        <div className="text-center space-y-3 mb-12">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-500/10 border border-rose-500/20 text-xs font-semibold text-rose-400">
             <Camera className="w-3.5 h-3.5" />
-            <span>VISUAL STORYTELLING</span>
+            <span>VISUAL EXHIBITION</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-100 tracking-tight">
             Through The <span className="text-gradient-rose">Photographer&apos;s Lens</span>
           </h2>
           <p className="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto">
-            Photography is my creative sanctuary. A visual exploration of light, human presence, street narratives, and timeless atmosphere.
+            A curated photographic exhibition capturing light, mood, human expression, and street narratives. 
+            All visual works are synced directly from my creative portfolio and Instagram.
           </p>
         </div>
 
-        {/* Gallery Grid */}
+        {/* Category Filter Pills */}
+        {categories.length > 1 && (
+          <div className="flex flex-wrap justify-center gap-2 mb-12">
+            {categories.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setActiveCategory(cat)}
+                className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all ${
+                  activeCategory === cat
+                    ? "bg-rose-500/20 text-rose-300 border border-rose-500/40 shadow-sm shadow-rose-500/20"
+                    : "bg-slate-900/60 text-slate-400 hover:text-white border border-slate-800 hover:bg-slate-800/50"
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
+        )}
+
+        {/* Dynamic Gallery Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {photos.map((photo) => (
+          {filteredPhotos.map((photo) => (
             <div
               key={photo.id}
               onClick={() => setSelectedPhoto(photo)}
@@ -83,6 +135,7 @@ const Gallery = () => {
                 <img
                   src={photo.src}
                   alt={photo.title}
+                  loading="lazy"
                   className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700 ease-out"
                 />
                 
@@ -116,15 +169,15 @@ const Gallery = () => {
           ))}
         </div>
 
-        {/* Photography Callout & Instagram Connection */}
+        {/* Instagram Profile & Connect Hub */}
         <div className="mt-14 p-8 rounded-3xl glass-panel border border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="space-y-2 text-center sm:text-left">
             <h3 className="text-xl font-bold text-slate-100 flex items-center justify-center sm:justify-start gap-2">
               <Sparkles className="w-5 h-5 text-rose-400" />
-              <span>Explore My Full Photographic Portfolio</span>
+              <span>Explore My Full Photography Series</span>
             </h3>
             <p className="text-sm text-slate-400 max-w-xl">
-              Follow along on Instagram for frequent photo sets, behind-the-scenes compositions, and visual storytelling series.
+              I regularly publish new photography sets, street series, and visual stories on Instagram at <b>@muntasir_shawon</b>.
             </p>
           </div>
 
@@ -132,20 +185,20 @@ const Gallery = () => {
             href="https://www.instagram.com/muntasir_shawon"
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm text-white bg-gradient-to-r from-rose-500 to-pink-600 hover:opacity-95 shadow-lg shadow-rose-500/25 transition-all hover:scale-105 active:scale-95 shrink-0"
+            className="flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm text-white bg-gradient-to-r from-rose-500 via-pink-500 to-rose-600 hover:opacity-95 shadow-lg shadow-rose-500/25 transition-all hover:scale-105 active:scale-95 shrink-0"
           >
             <Instagram className="w-4 h-4" />
-            <span>Follow @muntasir_shawon</span>
+            <span>Visit @muntasir_shawon on Instagram</span>
             <ExternalLink className="w-3.5 h-3.5" />
           </a>
         </div>
 
       </div>
 
-      {/* Full-Screen Lightbox Modal */}
+      {/* Full-Screen Interactive Lightbox Modal */}
       {selectedPhoto && (
         <div
-          className="fixed inset-0 z-50 bg-slate-950/90 backdrop-blur-xl flex items-center justify-center p-4 animate-in fade-in duration-300"
+          className="fixed inset-0 z-50 bg-slate-950/95 backdrop-blur-xl flex items-center justify-center p-4 animate-in fade-in duration-300"
           onClick={() => setSelectedPhoto(null)}
         >
           <div
@@ -162,11 +215,11 @@ const Gallery = () => {
             </button>
 
             {/* Photo Preview */}
-            <div className="relative max-h-[65vh] overflow-hidden bg-slate-950 flex items-center justify-center">
+            <div className="relative max-h-[68vh] overflow-hidden bg-slate-950 flex items-center justify-center">
               <img
                 src={selectedPhoto.src}
                 alt={selectedPhoto.title}
-                className="w-full h-auto max-h-[65vh] object-contain"
+                className="w-full h-auto max-h-[68vh] object-contain"
               />
             </div>
 
@@ -193,10 +246,10 @@ const Gallery = () => {
                 href="https://www.instagram.com/muntasir_shawon"
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-1.5 px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs font-semibold text-slate-200 transition-all hover:scale-105"
+                className="flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs font-semibold text-slate-200 transition-all hover:scale-105"
               >
                 <Instagram className="w-3.5 h-3.5 text-rose-400" />
-                <span>View on Instagram</span>
+                <span>View Instagram Post</span>
               </a>
             </div>
           </div>
