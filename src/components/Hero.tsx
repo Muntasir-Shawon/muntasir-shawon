@@ -1,118 +1,226 @@
-import { ArrowRight, Sparkles, Camera, Brain } from "lucide-react";
-import { Button } from "@/components/ui/button";
+﻿import { useState, useEffect } from "react";
+import { ArrowRight, Sparkles, Camera, Brain, Code2, Database, Github, Instagram, Mail, ChevronDown } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo.png";
+
 const Hero = () => {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({
-        behavior: "smooth"
-      });
-    }
-  };
-  return <section id="hero" className="min-h-screen flex items-center pt-20 px-4 bg-gradient-to-br from-yellow-light via-background to-background relative overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute top-20 right-10 w-32 h-32 bg-accent/20 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 left-10 w-40 h-40 bg-coral/20 rounded-full blur-3xl" />
-      
-      <div className="container mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
-          <div className="space-y-8 animate-fade-in relative z-10">
-            <div className="space-y-4">
-              <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-primary leading-tight" style={{
-              fontFamily: 'Georgia, serif'
-            }}>
-                A.K.M. Muntasir Uddin Shawon
+  const titles = [
+    "AI & Machine Learning Developer",
+    "Explainable AI (XAI) Enthusiast",
+    "Full-Stack Web Engineer",
+    "Photographer & Visual Storyteller",
+  ];
+
+  const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
+  const [displayedText, setDisplayedText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [typingSpeed, setTypingSpeed] = useState(80);
+
+  useEffect(() => {
+    const handleTyping = () => {
+      const fullText = titles[currentTitleIndex];
+
+      if (!isDeleting) {
+        setDisplayedText(fullText.substring(0, displayedText.length + 1));
+        if (displayedText.length + 1 === fullText.length) {
+          setTimeout(() => setIsDeleting(true), 1800);
+          setTypingSpeed(100);
+        } else {
+          setTypingSpeed(60);
+        }
+      } else {
+        setDisplayedText(fullText.substring(0, displayedText.length - 1));
+        if (displayedText.length === 0) {
+          setIsDeleting(false);
+          setCurrentTitleIndex((prev) => (prev + 1) % titles.length);
+          setTypingSpeed(150);
+        } else {
+          setTypingSpeed(35);
+        }
+      }
+    };
+
+    const timer = setTimeout(handleTyping, typingSpeed);
+    return () => clearTimeout(timer);
+  }, [displayedText, isDeleting, currentTitleIndex, typingSpeed, titles]);
+
+  return (
+    <section
+      id="hero"
+      className="relative min-h-[92vh] flex items-center justify-center pt-28 pb-16 px-4 overflow-hidden"
+    >
+      {/* Background Decorative Glow Orbs */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-sky-500/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/3 left-10 w-72 h-72 bg-indigo-500/10 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute bottom-20 right-10 w-80 h-80 bg-rose-500/10 rounded-full blur-[120px] pointer-events-none" />
+
+      {/* Grid Pattern Overlay */}
+      <div 
+        className="absolute inset-0 opacity-[0.03] pointer-events-none" 
+        style={{
+          backgroundImage: "linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)",
+          backgroundSize: "40px 40px"
+        }}
+      />
+
+      <div className="container mx-auto max-w-6xl relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          {/* Left Column: Bio & Interactive Headlines */}
+          <div className="lg:col-span-7 space-y-6 text-left">
+            
+            {/* Status Pill Badge */}
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-slate-800 text-xs font-medium text-slate-300 shadow-inner">
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span>Available for CSE & AI/ML Opportunities</span>
+            </div>
+
+            {/* Main Name & Dynamic Headline */}
+            <div className="space-y-3">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-slate-100 tracking-tight leading-[1.15]">
+                Hi, I&apos;m <br />
+                <span className="text-gradient font-black">
+                  Muntasir Shawon
+                </span>
               </h1>
-              <p className="text-2xl md:text-3xl text-coral font-semibold" style={{
-              fontFamily: 'Georgia, serif'
-            }}>
-                Blending Technology and Art
-              </p>
+              
+              <div className="h-10 sm:h-12 flex items-center">
+                <span className="text-xl sm:text-2xl md:text-3xl font-semibold text-slate-300 font-mono flex items-center">
+                  <span className="text-sky-400 mr-2">&gt;</span>
+                  {displayedText}
+                  <span className="inline-block w-2.5 h-6 ml-1 bg-sky-400 animate-pulse" />
+                </span>
+              </div>
             </div>
-            
-            <p className="text-lg text-foreground max-w-lg leading-relaxed">
-              Building Intelligent Systems and Capturing Timeless Moments. AI/ML Developer & Creative Photographer crafting solutions that merge innovation with artistry.
+
+            {/* Core Philosophy Bio */}
+            <p className="text-base sm:text-lg text-slate-400 max-w-xl leading-relaxed">
+              Computer Science & Engineering student at <strong className="text-slate-200">North South University</strong>. 
+              Engineering intelligent systems with <span className="text-sky-300">FastAPI, Machine Learning & LLMs</span>, while 
+              capturing human moments through the lens of <span className="text-rose-300">photography</span>.
             </p>
+
+            {/* Interactive CTA Buttons */}
+            <div className="flex flex-wrap items-center gap-4 pt-2">
+              <a
+                href="#projects"
+                className="flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm text-slate-950 bg-gradient-to-r from-sky-400 via-indigo-400 to-sky-300 hover:opacity-95 shadow-lg shadow-sky-500/25 transition-all hover:scale-105 active:scale-95"
+              >
+                <span>View Engineering Projects</span>
+                <ArrowRight className="w-4 h-4" />
+              </a>
+
+              <a
+                href="#gallery"
+                className="flex items-center gap-2 px-5 py-3.5 rounded-xl font-medium text-sm text-slate-200 bg-slate-900/80 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 transition-all hover:scale-105"
+              >
+                <Camera className="w-4 h-4 text-rose-400" />
+                <span>Photography Exhibition</span>
+              </a>
+            </div>
+
+            {/* Social Links & Quick Connect */}
+            <div className="flex items-center gap-3 pt-4 border-t border-slate-800/80">
+              <span className="text-xs text-slate-500 uppercase tracking-wider font-semibold">Socials:</span>
+              <a
+                href="https://github.com/Muntasir-Shawon"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="GitHub Profile"
+                className="p-2.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:border-sky-500/50 hover:bg-slate-800 transition-all"
+              >
+                <Github className="w-4 h-4" />
+              </a>
+              <a
+                href="https://www.instagram.com/muntasir_shawon"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Instagram Photography"
+                className="p-2.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-rose-400 hover:border-rose-500/50 hover:bg-slate-800 transition-all"
+              >
+                <Instagram className="w-4 h-4" />
+              </a>
+              <a
+                href="mailto:muntasir.shawon78@gmail.com"
+                aria-label="Send Email"
+                className="p-2.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-sky-400 hover:border-sky-500/50 hover:bg-slate-800 transition-all"
+              >
+                <Mail className="w-4 h-4" />
+              </a>
+            </div>
+          </div>
+
+          {/* Right Column: Visual Photo & Interactive Badges Card */}
+          <div className="lg:col-span-5 relative flex justify-center">
             
-            {/* View Portfolio Badge */}
-            <div className="flex items-center gap-6 pt-4">
-              <button onClick={() => scrollToSection("projects")} className="group relative">
-                <div className="relative flex items-center justify-center w-40 h-40 rounded-full border-4 border-primary hover:border-accent transition-all duration-300">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <svg className="w-full h-full -rotate-90" viewBox="0 0 160 160">
-                      <path id="circlePath" d="M 80, 80 m -60, 0 a 60,60 0 1,1 120,0 a 60,60 0 1,1 -120,0" fill="none" />
-                      <text className="text-xs fill-primary font-semibold tracking-wider">
-                        <textPath href="#circlePath" startOffset="0%">
-                          VIEW PORTFOLIO • VIEW PORTFOLIO •
-                        </textPath>
-                      </text>
-                    </svg>
+            {/* Outer Glowing Frame */}
+            <div className="relative w-full max-w-sm sm:max-w-md">
+              <div className="absolute -inset-1.5 bg-gradient-to-tr from-sky-500 via-indigo-500 to-rose-500 rounded-3xl blur-xl opacity-40 group-hover:opacity-75 transition-opacity" />
+              
+              <div className="relative rounded-2xl bg-slate-900 border border-slate-800/80 p-5 shadow-2xl backdrop-blur-xl space-y-4">
+                
+                {/* Photo Header */}
+                <div className="relative overflow-hidden rounded-xl bg-slate-950 aspect-[4/4.2] border border-slate-800 flex items-center justify-center">
+                  <img
+                    src={profilePhoto}
+                    alt="A.K.M. Muntasir Uddin Shawon"
+                    className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-transparent" />
+                  
+                  {/* Photo Overlay Caption */}
+                  <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs text-slate-300">
+                    <span className="font-semibold text-white">A.K.M. Muntasir Uddin Shawon</span>
+                    <span className="px-2 py-0.5 rounded-md bg-slate-900/90 border border-slate-700 text-[10px] text-sky-400">
+                      NSU • CSE
+                    </span>
                   </div>
-                  <ArrowRight className="h-8 w-8 text-primary group-hover:text-accent group-hover:translate-x-1 transition-all" />
                 </div>
-              </button>
 
-              <button onClick={() => scrollToSection("contact")} className="flex items-center gap-2 px-6 py-3 bg-accent hover:bg-accent/90 text-accent-foreground rounded-full font-semibold transition-all hover:scale-105">
-                <Sparkles className="h-5 w-5" />
-                Contact Me
-              </button>
+                {/* Floating Highlight Grid */}
+                <div className="grid grid-cols-2 gap-2.5 pt-1">
+                  <div className="p-3 rounded-xl bg-slate-950/80 border border-slate-800/80 flex items-center gap-2.5">
+                    <div className="p-2 rounded-lg bg-sky-500/10 text-sky-400">
+                      <Brain className="w-4 h-4" />
+                    </div>
+                    <div className="text-left">
+                      <div className="text-xs font-semibold text-slate-200">AI / ML & XAI</div>
+                      <div className="text-[10px] text-slate-400">FastAPI & Gemini</div>
+                    </div>
+                  </div>
+
+                  <div className="p-3 rounded-xl bg-slate-950/80 border border-slate-800/80 flex items-center gap-2.5">
+                    <div className="p-2 rounded-lg bg-rose-500/10 text-rose-400">
+                      <Camera className="w-4 h-4" />
+                    </div>
+                    <div className="text-left">
+                      <div className="text-xs font-semibold text-slate-200">Photography</div>
+                      <div className="text-[10px] text-slate-400">Light & Portraiture</div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
             </div>
+
           </div>
 
-          {/* Right Content - Hero Image */}
-          <div className="relative animate-fade-in">
-            {/* Decorative yellow blob */}
-            <div className="absolute -top-10 -left-10 w-64 h-64 bg-accent rounded-[40%_60%_70%_30%/40%_50%_60%_50%] -z-10" />
-            
-            {/* Main image container - Profile Photo */}
-            <div className="relative">
-              <div className="w-full h-[600px] rounded-3xl shadow-2xl relative z-10 overflow-hidden">
-                <img src={profilePhoto} alt="A.K.M. Muntasir Uddin Shawon - Profile Photo" className="w-full h-full object-cover" />
-              </div>
-              
-              {/* Floating badges */}
-              <div className="absolute -right-6 top-20 bg-coral p-4 rounded-2xl shadow-lg animate-float">
-                <Brain className="h-8 w-8 text-white" />
-                <p className="text-xs text-white font-semibold mt-2">AI/ML<br />Developer</p>
-              </div>
-              
-              <div className="absolute -left-6 top-1/2 bg-accent p-4 rounded-2xl shadow-lg animate-float" style={{
-              animationDelay: '0.5s'
-            }}>
-                <div className="flex flex-col items-center">
-                  <Sparkles className="h-6 w-6 text-primary" />
-                  <p className="text-xs text-primary font-semibold mt-2">CSE
-Student<br />Student</p>
-                </div>
-              </div>
-              
-              <div className="absolute -right-8 bottom-20 bg-primary p-4 rounded-2xl shadow-lg animate-float" style={{
-              animationDelay: '1s'
-            }}>
-                <Camera className="h-6 w-6 text-white" />
-                <p className="text-xs text-white font-semibold mt-2">Creative<br />Photographer</p>
-              </div>
-            </div>
-
-            {/* Decorative sparkle */}
-            <div className="absolute top-10 right-20">
-              <Sparkles className="h-8 w-8 text-accent animate-pulse" />
-            </div>
-          </div>
         </div>
-      </div>
 
-      <style>{`
-        @keyframes float {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-10px); }
-        }
-        .animate-float {
-          animation: float 3s ease-in-out infinite;
-        }
-      `}</style>
-    </section>;
+        {/* Scroll Down Indicator */}
+        <div className="pt-16 flex justify-center">
+          <a
+            href="#about"
+            aria-label="Scroll to About Section"
+            className="flex flex-col items-center gap-1.5 text-xs text-slate-500 hover:text-sky-400 transition-colors"
+          >
+            <span>DISCOVER MORE</span>
+            <ChevronDown className="w-4 h-4 animate-bounce" />
+          </a>
+        </div>
+
+      </div>
+    </section>
+  );
 };
+
 export default Hero;

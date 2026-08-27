@@ -1,73 +1,80 @@
-import { Camera, Facebook, Instagram, Mail } from "lucide-react";
+﻿import { ArrowUp, Github, Instagram, Mail, Heart, Sparkles } from "lucide-react";
 
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
-    <footer className="bg-primary text-primary-foreground py-12 px-4">
-      <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-          {/* Brand */}
-          <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
-                <Camera className="h-6 w-6 text-primary" />
-              </div>
-              <span className="text-xl font-bold" style={{ fontFamily: 'Georgia, serif' }}>
-                A.K.M. Muntasir
+    <footer className="border-t border-slate-800/80 bg-slate-950/80 py-12 px-4 relative">
+      <div className="container mx-auto max-w-6xl">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+          
+          {/* Brand & Identity */}
+          <div className="space-y-1 text-center md:text-left">
+            <div className="flex items-center justify-center md:justify-start gap-2">
+              <span className="font-bold text-slate-100 text-lg">
+                A.K.M. Muntasir Uddin Shawon
+              </span>
+              <span className="px-2 py-0.5 rounded-full bg-sky-500/10 text-sky-400 text-[10px] font-semibold border border-sky-500/20">
+                CSE @ NSU
               </span>
             </div>
-            <p className="text-sm opacity-80">
-              Blending Technology and Art<br />
-              Building Intelligent Systems & Capturing Timeless Moments
+            <p className="text-xs text-slate-400">
+              Engineering intelligence through code • Capturing emotion through light.
             </p>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h3 className="font-bold mb-4">Quick Links</h3>
-            <div className="space-y-2 text-sm opacity-80">
-              <div>About Me</div>
-              <div>Portfolio</div>
-              <div>Services</div>
-              <div>Contact</div>
-            </div>
+          {/* Socials & Back to Top */}
+          <div className="flex items-center gap-4">
+            <a
+              href="https://github.com/Muntasir-Shawon"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="GitHub"
+              className="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:border-sky-500/40 transition-colors"
+            >
+              <Github className="w-4 h-4" />
+            </a>
+            <a
+              href="https://www.instagram.com/muntasir_shawon"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Instagram"
+              className="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-400 hover:text-rose-400 hover:border-rose-500/40 transition-colors"
+            >
+              <Instagram className="w-4 h-4" />
+            </a>
+            <a
+              href="mailto:muntasir.shawon78@gmail.com"
+              aria-label="Email"
+              className="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-400 hover:text-sky-400 hover:border-sky-500/40 transition-colors"
+            >
+              <Mail className="w-4 h-4" />
+            </a>
+
+            <button
+              onClick={scrollToTop}
+              aria-label="Scroll to top"
+              className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-slate-900 border border-slate-800 text-xs font-semibold text-slate-300 hover:text-sky-400 hover:border-sky-500/40 transition-all hover:scale-105 active:scale-95"
+            >
+              <span>Back to Top</span>
+              <ArrowUp className="w-3.5 h-3.5 text-sky-400" />
+            </button>
           </div>
 
-          {/* Connect */}
-          <div>
-            <h3 className="font-bold mb-4">Connect</h3>
-            <div className="flex gap-3 mb-4">
-              <a
-                href="https://www.facebook.com/muntasir.shawon/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-accent rounded-lg flex items-center justify-center hover:bg-accent/80 transition-colors"
-              >
-                <Facebook className="h-5 w-5 text-primary" />
-              </a>
-              <a
-                href="https://www.instagram.com/muntasir_shawon?igsh=MTEwODQyNWNuc216Nw=="
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-coral rounded-lg flex items-center justify-center hover:bg-coral/80 transition-colors"
-              >
-                <Instagram className="h-5 w-5 text-white" />
-              </a>
-              <a
-                href="mailto:muntasir.shawon78@gmail.com"
-                className="w-10 h-10 bg-accent rounded-lg flex items-center justify-center hover:bg-accent/80 transition-colors"
-              >
-                <Mail className="h-5 w-5 text-primary" />
-              </a>
-            </div>
-            <p className="text-sm opacity-80">
-              muntasir.shawon78@gmail.com<br />
-              Dhaka, Bangladesh
-            </p>
-          </div>
         </div>
 
-        <div className="border-t border-primary-foreground/20 pt-8 text-center text-sm opacity-70">
-          <p>© {new Date().getFullYear()} A.K.M. Muntasir Uddin Shawon. All rights reserved.</p>
+        <div className="mt-8 pt-6 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
+          <div>
+            © {new Date().getFullYear()} Muntasir Shawon. All rights reserved.
+          </div>
+          <div className="flex items-center gap-1 text-slate-400">
+            <span>Built with</span>
+            <span className="text-sky-400 font-semibold">React</span>
+            <span>&</span>
+            <span className="text-rose-400 font-semibold">Tailwind CSS</span>
+          </div>
         </div>
       </div>
     </footer>
