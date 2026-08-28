@@ -1,75 +1,77 @@
 <div align="center">
 
-<!-- Futuristic Gradient Cyber-Header -->
+<!-- 🦇 Cinematic Gotham Night Panoramic Header Banner -->
 <a href="https://muntasir-shawon.github.io/muntasir-shawon/">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=1,12,24,31&height=220&section=header&text=A.K.M.%20Muntasir%20Shawon&fontSize=42&fontAlignY=35&desc=AI%2FML%20Systems%20Engineer%20%E2%80%A2%20Full-Stack%20Architect%20%E2%80%A2%20Visual%20Artist&descFontSize=17&descAlignY=58&animation=fadeIn&fontColor=ffffff" width="100%" alt="Header Banner" />
+  <img src="https://raw.githubusercontent.com/Muntasir-Shawon/muntasir-shawon/main/assets/batman-banner.png" width="100%" alt="Batcave Terminal Banner" style="border-radius: 12px; border: 1px solid #1E293B;" />
 </a>
 
-<!-- Animated JetBrains Dynamic Typing Sub-header -->
+<br/><br/>
+
+<!-- Animated JetBrains Cyber-Bat Dynamic Typing Sub-header -->
 <a href="https://muntasir-shawon.github.io/muntasir-shawon/">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=20&duration=3000&pause=1000&color=38BDF8&center=true&vCenter=true&multiline=true&width=750&height=80&lines=%E2%96%B8+AI+%2F+ML+ENGINEER+%E2%80%A2+EXPLAINABLE+AI+%26+LLM+AGENTS;%E2%96%B8+ARCHITECTING+FITNUT+%26+HIGH-IMPACT+FULL-STACK+SYSTEMS;%E2%96%B8+INTERSECTING+COMPUTATIONAL+LOGIC+%26+VISUAL+STORYTELLING" alt="Dynamic Typing Subheader" />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=20&duration=3000&pause=1000&color=38BDF8&center=true&vCenter=true&multiline=true&width=800&height=85&lines=%E2%96%B8+THE+DARK+KNIGHT+OF+CODE+%E2%80%A2+AI%2FML+SYSTEMS+%26+FULL-STACK+ARCHITECT;%E2%96%B8+ARCHITECTING+FITNUT+%26+INTERVIEWMATE-AI+AT+GOTHAM+SCALE;%E2%96%B8+%22I+CODE+AT+NIGHT.+PRECISION+BUILDS+UNBREAKABLE+SYSTEMS.%22" alt="Dynamic Typing Subheader" />
 </a>
 
 <p align="center">
-  <a href="https://muntasir-shawon.github.io/muntasir-shawon/"><img src="https://img.shields.io/badge/✨_Live_Interactive_Portfolio-0D1117?style=for-the-badge&logo=safari&logoColor=38BDF8&labelColor=0D1117" alt="Live Portfolio" /></a>
-  <a href="https://github.com/Muntasir-Shawon/FitNut-Fitness-Nutrition-System"><img src="https://img.shields.io/badge/🏋️_Flagship:_FitNut_Ecosystem-0D1117?style=for-the-badge&logo=expo&logoColor=10B981&labelColor=0D1117" alt="FitNut Flagship" /></a>
-  <a href="mailto:muntasir.shawon78@gmail.com"><img src="https://img.shields.io/badge/Email-muntasir.shawon78@gmail.com-0D1117?style=for-the-badge&logo=gmail&logoColor=EF4444&labelColor=0D1117" alt="Email" /></a>
-  <a href="https://www.instagram.com/muntasir_shawon"><img src="https://img.shields.io/badge/Instagram-@muntasir__shawon-0D1117?style=for-the-badge&logo=instagram&logoColor=EC4899&labelColor=0D1117" alt="Instagram" /></a>
+  <a href="https://muntasir-shawon.github.io/muntasir-shawon/"><img src="https://img.shields.io/badge/🦇_Bat--Signal:_Live_Portfolio-0D1117?style=for-the-badge&logo=safari&logoColor=38BDF8&labelColor=0D1117" alt="Live Portfolio" /></a>
+  <a href="https://github.com/Muntasir-Shawon/FitNut-Fitness-Nutrition-System"><img src="https://img.shields.io/badge/🏋️_WayneTech_Flagship:_FitNut-0D1117?style=for-the-badge&logo=expo&logoColor=10B981&labelColor=0D1117" alt="FitNut Flagship" /></a>
+  <a href="https://github.com/Muntasir-Shawon/InterviewMate-AI"><img src="https://img.shields.io/badge/🤖_AI_Engine:_InterviewMate-0D1117?style=for-the-badge&logo=google&logoColor=38BDF8&labelColor=0D1117" alt="InterviewMate Flagship" /></a>
+  <a href="mailto:muntasir.shawon78@gmail.com"><img src="https://img.shields.io/badge/⚡_Encrypted_Comms-muntasir.shawon78@gmail.com-0D1117?style=for-the-badge&logo=gmail&logoColor=EF4444&labelColor=0D1117" alt="Email" /></a>
+  <a href="https://www.instagram.com/muntasir_shawon"><img src="https://img.shields.io/badge/📷_Gotham_Surveillance-@muntasir__shawon-0D1117?style=for-the-badge&logo=instagram&logoColor=EC4899&labelColor=0D1117" alt="Instagram" /></a>
 </p>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=Muntasir-Shawon&label=Profile%20Telemetry%20Views&color=38bdf8&style=flat-square" alt="Profile Views" />
+  <img src="https://komarev.com/ghpvc/?username=Muntasir-Shawon&label=Batcomputer%20Access%20Grid&color=38bdf8&style=flat-square" alt="Batcomputer Views" />
 </p>
 
 </div>
 
 ---
 
-### 🦇 Developer Dispatch & System Telemetry
+### 🦇 Developer Dispatch & Batcave Operative
 
 <table>
   <tr>
     <td width="56%" valign="middle">
-      <p>⚡ <b>AI/ML Systems Engineer & Full-Stack Architect</b> bridging high-performance backend pipelines, conversational AI agents, and intuitive user interfaces.</p>
+      <p>⚡ <b>AI/ML Systems Engineer & Full-Stack Architect</b> operating in the intersection of intelligent agents, resilient backend infrastructure, and immersive visual storytelling.</p>
       <ul>
-        <li>🔭 <b>Currently Building:</b> <a href="https://github.com/Muntasir-Shawon/FitNut-Fitness-Nutrition-System"><b>FitNut</b></a> (AI Health Ecosystem) & <a href="https://github.com/Muntasir-Shawon/InterviewMate-AI"><b>InterviewMate-AI</b></a></li>
-        <li>🧠 <b>Research & Focus:</b> LangChain AI Agents, Explainable AI (XAI / SHAP), FastAPI & React Native</li>
-        <li>💬 <b>Ask Me About:</b> Full-Stack Systems, Gemini AI Integration, LLM Agent Memory, Cloud Architecture</li>
-        <li>📫 <b>Direct Signal:</b> <a href="mailto:muntasir.shawon78@gmail.com"><code>muntasir.shawon78@gmail.com</code></a></li>
-        <li>🦇 <b>Night Shift:</b> <i>"I code at night. Precision builds systems; darkness sharpens focus."</i></li>
+        <li>🦇 <b>Active Vigil:</b> Architecting <a href="https://github.com/Muntasir-Shawon/FitNut-Fitness-Nutrition-System"><b>FitNut Ecosystem</b></a> (Cross-Platform AI Health Engine) & <a href="https://github.com/Muntasir-Shawon/InterviewMate-AI"><b>InterviewMate-AI</b></a> (Resume NLP & Dynamic Mock Interview Platform).</li>
+        <li>🧠 <b>Bat-Lab R&D:</b> LangChain AI Agents, Explainable AI (XAI / SHAP Feature Attribution), FastAPI Pipelines & React Native Mobile Engineering.</li>
+        <li>💬 <b>Tactical Inquiries:</b> Scalable Distributed Systems, Gemini AI Orchestration, LLM Agent Memory, Full-Stack Architecture.</li>
+        <li>📡 <b>Encrypted Signal:</b> <a href="mailto:muntasir.shawon78@gmail.com"><code>muntasir.shawon78@gmail.com</code></a></li>
+        <li>🌙 <b>Night Shift Creed:</b> <i>"I code at night. Precision builds systems; darkness sharpens focus."</i></li>
       </ul>
     </td>
     <td width="44%" align="center" valign="middle">
-      <img src="https://raw.githubusercontent.com/Muntasir-Shawon/muntasir-shawon/main/assets/batman-avatar.png" width="100%" alt="Batman Coding on Laptop" style="border-radius: 12px;" />
+      <img src="https://raw.githubusercontent.com/Muntasir-Shawon/muntasir-shawon/main/assets/batman-avatar.png" width="100%" alt="Batman Coding on Laptop" style="border-radius: 12px; border: 1px solid #1E293B;" />
     </td>
   </tr>
 </table>
 
 ```bash
-╭─ ⚡ muntasir@core-engine ~
-╰─$ neofetch --profile-v2
+╭─ 🦇 muntasir@batcomputer-mainframe [Gotham City ~ /dev/nvme0n1]
+╰─$ batfetch --classified-v3
 
-  █████████   • Name        : A.K.M. Muntasir Uddin Shawon
-  ██ ⚙️  ██   • Role        : AI/ML Systems Engineer & Full-Stack Architect
-  █████████   • Institution : North South University (Computer Science & Engineering)
-  ██ 🚀  ██   • Flagship    : FitNut (Cross-Platform Mobile/Web AI Fitness Ecosystem)
-  █████████   • Focus Areas : LangChain AI Agents, Explainable AI (XAI), FastAPI, React Native
-              • Creative    : Visual Storyteller & Street/Portrait Photography
-              • Philosophy  : "In code, precision builds systems. In photography, light crafts emotion."
+        /\                  • Operative    : A.K.M. Muntasir Uddin Shawon (The Dark Coder)
+       /  \      /\         • Call Sign    : The Night Architect
+      / /\ \    /  \        • Institution  : North South University (Computer Science & Engineering)
+     / /  \ \  / /\ \       • Flagship Ops : FitNut Ecosystem • InterviewMate-AI • LifeSat XAI
+    / /    \ \/ /  \ \      • Weaponry     : LangChain AI Agents, FastAPI, React Native, XAI, MySQL
+   /_/      \__/    \_\     • Directive    : "It's not who I am underneath, but what I build that defines me."
 ```
 
 ---
 
-### 🏆 Flagship & Curated Engineering Showcases
+### 🏆 WayneTech Classified Projects & Flagship Showcases
 
-> *A focused index of high-impact production systems, intelligent agents, and machine learning research.*
+> *Classified dossier of production-grade intelligent systems, autonomous agents, and machine learning pipelines.*
 
 <table>
   <!-- Row 1: FitNut & InterviewMate-AI -->
   <tr>
     <td width="50%" valign="top">
       <div align="center">
-        <h3>🏋️‍♂️ <a href="https://github.com/Muntasir-Shawon/FitNut-Fitness-Nutrition-System">FitNut — AI Fitness & Nutrition Ecosystem</a></h3>
+        <h3>🏋️‍♂️ <a href="https://github.com/Muntasir-Shawon/FitNut-Fitness-Nutrition-System">Operation FitNut — AI Fitness & Nutrition Ecosystem</a></h3>
         <p><code>React Native</code> <code>Expo</code> <code>Node.js</code> <code>Express</code> <code>MySQL</code> <code>LangChain</code> <code>LLM Chatbot</code></p>
       </div>
       <p><b>A cross-platform health & fitness management ecosystem</b> engineered with a 10-table relational database, automated BMR/TDEE & macronutrient calculators, dynamic workout scheduling, and a <b>LangChain AI conversational assistant</b> for customized fitness regimens.</p>
@@ -84,7 +86,7 @@
     </td>
     <td width="50%" valign="top">
       <div align="center">
-        <h3>🤖 <a href="https://github.com/Muntasir-Shawon/InterviewMate-AI">InterviewMate-AI — Career Prep Engine</a></h3>
+        <h3>🤖 <a href="https://github.com/Muntasir-Shawon/InterviewMate-AI">Operation InterviewMate — AI Career Simulation Engine</a></h3>
         <p><code>FastAPI</code> <code>Google Gemini AI</code> <code>TypeScript</code> <code>React 18</code> <code>Tailwind CSS</code></p>
       </div>
       <p><b>An intelligent career preparation platform</b> that analyzes resumes against target job descriptions using NLP and generates tailored, adaptive mock interview simulations with real-time feedback.</p>
@@ -103,7 +105,7 @@
   <tr>
     <td width="50%" valign="top">
       <div align="center">
-        <h3>🧠 <a href="https://github.com/Muntasir-Shawon/Life-Satisfaction-prediction-using-Machine-Learning-and-Explainable-AI">Life Satisfaction Prediction & XAI</a></h3>
+        <h3>🧠 <a href="https://github.com/Muntasir-Shawon/Life-Satisfaction-prediction-using-Machine-Learning-and-Explainable-AI">Project MindScan — Life Satisfaction & Explainable AI</a></h3>
         <p><code>Python</code> <code>Machine Learning</code> <code>Explainable AI (XAI)</code> <code>Scikit-Learn</code> <code>SHAP</code></p>
       </div>
       <p><b>Machine learning regression pipeline</b> estimating national & individual life satisfaction indices, paired with <b>Explainable AI (XAI)</b> frameworks to interpret model features and prevent black-box bias.</p>
@@ -118,7 +120,7 @@
     </td>
     <td width="50%" valign="top">
       <div align="center">
-        <h3>🌐 <a href="https://github.com/Muntasir-Shawon/muntasir-shawon">Interactive Portfolio & Visual Gallery</a></h3>
+        <h3>🌐 <a href="https://github.com/Muntasir-Shawon/muntasir-shawon">Gotham Visual Darkroom & Interactive Portfolio Hub</a></h3>
         <p><code>TypeScript</code> <code>React 18</code> <code>Tailwind CSS</code> <code>Vite</code> <code>GitHub Actions CI/CD</code></p>
       </div>
       <p><b>Modern, responsive personal portfolio hub</b> blending high-performance software engineering showcases with fine-art photography curation, interactive filtering, and dynamic lightboxes.</p>
@@ -137,7 +139,7 @@
   <tr>
     <td width="100%" colspan="2" valign="top">
       <div align="center">
-        <h3>📊 <a href="https://github.com/Muntasir-Shawon/Covid-19-data-analysis">COVID-19 Epidemiological Analytics & EDA</a></h3>
+        <h3>📊 <a href="https://github.com/Muntasir-Shawon/Covid-19-data-analysis">Epidemic Trajectory Analyzer — COVID-19 Analytics</a></h3>
         <p><code>Python</code> <code>Pandas</code> <code>NumPy</code> <code>Matplotlib</code> <code>Seaborn</code> <code>Statistical Modeling</code></p>
       </div>
       <p>Comprehensive exploratory data analysis uncovering epidemiological curves, transmission trajectories, fatality ratios, and geographical distribution patterns across global pandemic phases.</p>
@@ -150,16 +152,16 @@
 
 ---
 
-### 🛠️ Technical Stack Matrix
+### 🛠️ Batcave Tactical Arsenal & Tech Matrix
 
 <div align="center">
 
-| Domain | Technologies & Frameworks |
+| Tactical Domain | Technologies, Languages & Frameworks |
 | :--- | :--- |
-| **🧠 AI, ML & Intelligent Agents** | `Python` `LangChain` `Google Gemini AI` `FastAPI` `Scikit-Learn` `Explainable AI (SHAP/LIME)` `Pandas` `NumPy` |
-| **⚡ Full-Stack & Mobile** | `React` `React Native (Expo)` `TypeScript` `JavaScript (ES6+)` `Node.js` `Express` `Tailwind CSS` `Vite` `HTML5/CSS3` |
-| **🗄️ Databases & Systems** | `MySQL` `Relational Modeling` `C++` `C` `RESTful APIs` `Postman` |
-| **🔧 DevOps & Environment** | `Git` `GitHub Actions CI/CD` `VS Code` `Linux / Bash` `npm / Vite` |
+| **🧠 Cognitive Intelligence & AI Agents** | `Python` `LangChain` `Google Gemini AI` `FastAPI` `Scikit-Learn` `Explainable AI (SHAP/LIME)` `Pandas` `NumPy` |
+| **⚡ Full-Stack & Mobile Engineering** | `React` `React Native (Expo)` `TypeScript` `JavaScript (ES6+)` `Node.js` `Express` `Tailwind CSS` `Vite` `HTML5/CSS3` |
+| **🗄️ Data Warehouses & Core Systems** | `MySQL` `Relational Modeling` `C++` `C` `RESTful APIs` `Postman` |
+| **🔧 DevOps, Tooling & Security** | `Git` `GitHub Actions CI/CD` `VS Code` `Linux / Bash` `npm / Vite` |
 
 <br />
 
@@ -171,9 +173,9 @@
 
 ---
 
-### 📷 Visual Storytelling & Photography Exhibition
+### 📷 Gotham Night Surveillance & Visual Storytelling
 
-> *"Light is the language; emotion is the story. Here is a glimpse of my visual work outside the terminal."*
+> *"Light is the language; emotion is the story. Even in the darkest alleys of Gotham, light crafts truth."*
 
 <div align="center">
   <table>
@@ -182,7 +184,7 @@
         <a href="https://muntasir-shawon.github.io/muntasir-shawon/#gallery">
           <img src="https://raw.githubusercontent.com/Muntasir-Shawon/muntasir-shawon/main/src/assets/gallery/photo-1.jpg" width="100%" style="border-radius: 12px; border: 1px solid #1E293B;" alt="Atmosphere & Mood" />
         </a>
-        <br /><sub><b>Atmosphere & Mood</b></sub>
+        <br /><sub><b>Shadows & Atmosphere</b></sub>
       </td>
       <td width="25%" align="center">
         <a href="https://muntasir-shawon.github.io/muntasir-shawon/#gallery">
@@ -194,13 +196,13 @@
         <a href="https://muntasir-shawon.github.io/muntasir-shawon/#gallery">
           <img src="https://raw.githubusercontent.com/Muntasir-Shawon/muntasir-shawon/main/src/assets/gallery/photo-3.jpg" width="100%" style="border-radius: 12px; border: 1px solid #1E293B;" alt="Street & Perspective" />
         </a>
-        <br /><sub><b>Street & Perspective</b></sub>
+        <br /><sub><b>Gotham Street Perspective</b></sub>
       </td>
       <td width="25%" align="center">
         <a href="https://muntasir-shawon.github.io/muntasir-shawon/#gallery">
           <img src="https://raw.githubusercontent.com/Muntasir-Shawon/muntasir-shawon/main/src/assets/gallery/photo-4.jpg" width="100%" style="border-radius: 12px; border: 1px solid #1E293B;" alt="Light & Composition" />
         </a>
-        <br /><sub><b>Light & Composition</b></sub>
+        <br /><sub><b>Light & Geometry</b></sub>
       </td>
     </tr>
   </table>
@@ -212,7 +214,7 @@
 
 ---
 
-### 📊 Real-Time GitHub Activity & Telemetry
+### 📊 Batcomputer Real-Time Activity & Telemetry
 
 <div align="center">
   <img src="https://github-stats-extended.vercel.app/api?username=Muntasir-Shawon&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=38BDF8&text_color=94A3B8&icon_color=38BDF8" width="49%" alt="GitHub Stats" />
@@ -226,6 +228,7 @@
 ---
 
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=31,24,12,1&height=100&section=footer" width="100%" alt="Footer Banner" />
-  <p><sub>⚡ Engineered with passion for intelligent algorithms & visual aesthetics • © A.K.M. Muntasir Uddin Shawon</sub></p>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,100:030712&height=110&section=footer&text=%F0%9F%A6%87%20%22It%27s%20not%20who%20I%20am%20underneath%2C%20but%20what%20I%20build%20that%20defines%20me.%22&fontSize=16&fontAlignY=55&fontColor=38BDF8" width="100%" alt="Batcave Footer Banner" />
+  <p><sub>⚡ Engineered at WayneTech R&D Labs • © A.K.M. Muntasir Uddin Shawon</sub></p>
 </div>
+
