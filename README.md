@@ -41,7 +41,7 @@
       </ul>
     </td>
     <td width="44%" align="center" valign="middle">
-      <img src="https://raw.githubusercontent.com/Muntasir-Shawon/muntasir-shawon/main/assets/batman-avatar.png" width="100%" alt="Batman Coding on Laptop" style="border-radius: 12px; border: 1px solid #1E293B;" />
+      <img src="https://raw.githubusercontent.com/Muntasir-Shawon/muntasir-shawon/main/assets/batman-dark-knight.png" width="100%" alt="Batman Coding on Laptop" style="border-radius: 12px; border: 1px solid #1E293B;" />
     </td>
   </tr>
 </table>
