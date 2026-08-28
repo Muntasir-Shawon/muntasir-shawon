@@ -1,5 +1,6 @@
-﻿import { useState, useMemo } from "react";
+import { useState, useMemo } from "react";
 import { Camera, Instagram, Maximize2, X, Sparkles, ExternalLink, Filter, Image as ImageIcon } from "lucide-react";
+import { BatInsignia } from "./BatInsignia";
 
 interface PhotoItem {
   id: string;
@@ -20,25 +21,25 @@ const defaultMetadata: Record<string, { title: string; category: string; story: 
   "photo-1": {
     title: "Atmosphere & Mood",
     category: "Mood & Atmosphere",
-    story: "Exploring subtle tonal gradients and ambient environmental lighting.",
-    tag: "Natural Light",
+    story: "Exploring subtle tonal gradients, shadow depth, and ambient environmental lighting.",
+    tag: "Noir Lighting",
   },
   "photo-2": {
     title: "Portraits & Human Expression",
     category: "Portraits",
-    story: "Focusing on authentic character, gaze, and depth of field.",
+    story: "Focusing on authentic character, deep gaze, and atmospheric depth of field.",
     tag: "Portraiture",
   },
   "photo-3": {
     title: "Street Narratives & Life",
     category: "Street & Urban",
-    story: "Capturing fleeting candid moments and architectural geometry.",
-    tag: "Street Life",
+    story: "Capturing fleeting candid moments, shadows, and architectural geometry in urban life.",
+    tag: "Gotham Streets",
   },
   "photo-4": {
     title: "Light & Shadow Dynamics",
     category: "Light & Composition",
-    story: "Playing with golden hour highlights and deliberate framing balance.",
+    story: "Playing with chiaroscuro contrast, golden hour highlights, and deliberate framing balance.",
     tag: "Composition",
   },
 };
@@ -47,7 +48,7 @@ const Gallery = () => {
   const [selectedPhoto, setSelectedPhoto] = useState<PhotoItem | null>(null);
   const [activeCategory, setActiveCategory] = useState<string>("All");
 
-  // Build the dynamic photos array from imported files
+  // Build dynamic photos array
   const photos: PhotoItem[] = useMemo(() => {
     return Object.entries(photoModules).map(([path, module], index) => {
       const fileNameWithExt = path.split("/").pop() || `photo-${index + 1}`;
@@ -56,7 +57,7 @@ const Gallery = () => {
       const meta = defaultMetadata[fileNameWithoutExt] || {
         title: `Capture #${index + 1}`,
         category: index % 2 === 0 ? "Portraits" : "Street & Urban",
-        story: "Photographic composition capturing depth, light, and visual aesthetic.",
+        story: "Photographic composition capturing depth, shadow, and visual aesthetic.",
         tag: "Photography",
       };
 
@@ -72,7 +73,7 @@ const Gallery = () => {
     });
   }, []);
 
-  // Extract unique categories
+  // Unique categories
   const categories = useMemo(() => {
     const set = new Set<string>(["All"]);
     photos.forEach((p) => set.add(p.category));
@@ -90,16 +91,15 @@ const Gallery = () => {
         
         {/* Section Header */}
         <div className="text-center space-y-3 mb-12">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-500/10 border border-rose-500/20 text-xs font-semibold text-rose-400">
-            <Camera className="w-3.5 h-3.5" />
-            <span>VISUAL EXHIBITION</span>
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-bat-gold/10 border border-bat-gold/30 text-xs font-mono font-bold text-bat-gold">
+            <Camera className="w-3.5 h-3.5 text-bat-gold" />
+            <span>NOIR & LIGHT ARCHIVES // 04</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-100 tracking-tight">
-            Through The <span className="text-gradient-rose">Photographer&apos;s Lens</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-orbitron font-extrabold text-slate-100 tracking-tight">
+            Through The <span className="text-gradient">Photographer&apos;s Lens</span>
           </h2>
-          <p className="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto">
-            A curated photographic exhibition capturing light, mood, human expression, and street narratives. 
-            All visual works are synced directly from my creative portfolio and Instagram.
+          <p className="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto font-sans">
+            A curated photographic exhibition capturing high-contrast light, moody atmospheres, and raw human expressions in the spirit of Gotham noir.
           </p>
         </div>
 
@@ -110,10 +110,10 @@ const Gallery = () => {
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all ${
+                className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-mono font-semibold transition-all ${
                   activeCategory === cat
-                    ? "bg-rose-500/20 text-rose-300 border border-rose-500/40 shadow-sm shadow-rose-500/20"
-                    : "bg-slate-900/60 text-slate-400 hover:text-white border border-slate-800 hover:bg-slate-800/50"
+                    ? "bg-bat-gold text-[#06070a] border border-bat-gold shadow-md shadow-bat-gold/25 font-bold"
+                    : "bg-[#0A0C13]/90 text-slate-400 hover:text-slate-200 border border-bat-border hover:bg-[#121622]"
                 }`}
               >
                 {cat}
@@ -128,10 +128,10 @@ const Gallery = () => {
             <div
               key={photo.id}
               onClick={() => setSelectedPhoto(photo)}
-              className="group relative cursor-pointer rounded-2xl overflow-hidden bg-slate-900 border border-slate-800/90 shadow-xl hover:border-rose-500/50 transition-all duration-500 hover:-translate-y-2"
+              className="group relative cursor-pointer rounded-2xl overflow-hidden bg-[#090B12] border border-bat-border shadow-xl hover:border-bat-gold/60 transition-all duration-500 hover:-translate-y-2 tactical-border"
             >
               {/* Photo Frame Container */}
-              <div className="relative aspect-[3/4] overflow-hidden bg-slate-950">
+              <div className="relative aspect-[3/4] overflow-hidden bg-black">
                 <img
                   src={photo.src}
                   alt={photo.title}
@@ -140,27 +140,27 @@ const Gallery = () => {
                 />
                 
                 {/* Dark Vignette Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#06070a] via-[#06070a]/30 to-transparent opacity-85 group-hover:opacity-95 transition-opacity" />
 
                 {/* View Icon Badge on Hover */}
-                <div className="absolute top-3 right-3 p-2 rounded-xl bg-slate-950/80 backdrop-blur-md border border-slate-700/80 text-rose-400 opacity-0 group-hover:opacity-100 transition-all scale-75 group-hover:scale-100">
+                <div className="absolute top-3 right-3 p-2 rounded-xl bg-[#080A10]/90 backdrop-blur-md border border-bat-gold/50 text-bat-gold opacity-0 group-hover:opacity-100 transition-all scale-75 group-hover:scale-100">
                   <Maximize2 className="w-4 h-4" />
                 </div>
 
                 {/* Tag */}
-                <div className="absolute top-3 left-3 px-2.5 py-0.5 rounded-md bg-slate-950/80 backdrop-blur-md border border-slate-700/80 text-[10px] font-semibold text-slate-300">
+                <div className="absolute top-3 left-3 px-2.5 py-0.5 rounded-md bg-[#080A10]/90 backdrop-blur-md border border-bat-border text-[10px] font-mono font-bold text-bat-gold">
                   {photo.tag}
                 </div>
 
                 {/* Caption Details */}
                 <div className="absolute bottom-3 left-3 right-3 space-y-1">
-                  <span className="text-[10px] font-semibold text-rose-400 uppercase tracking-wider block">
+                  <span className="text-[10px] font-mono font-bold text-bat-gold uppercase tracking-wider block">
                     {photo.category}
                   </span>
-                  <h3 className="text-base font-bold text-white leading-tight">
+                  <h3 className="text-sm font-orbitron font-bold text-white leading-tight">
                     {photo.title}
                   </h3>
-                  <p className="text-xs text-slate-400 line-clamp-2 pt-0.5">
+                  <p className="text-xs text-slate-400 line-clamp-2 pt-0.5 font-sans">
                     {photo.story}
                   </p>
                 </div>
@@ -170,14 +170,14 @@ const Gallery = () => {
         </div>
 
         {/* Instagram Profile & Connect Hub */}
-        <div className="mt-14 p-8 rounded-3xl glass-panel border border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-6">
-          <div className="space-y-2 text-center sm:text-left">
-            <h3 className="text-xl font-bold text-slate-100 flex items-center justify-center sm:justify-start gap-2">
-              <Sparkles className="w-5 h-5 text-rose-400" />
+        <div className="mt-14 p-8 rounded-3xl hud-panel border border-bat-border flex flex-col sm:flex-row items-center justify-between gap-6 relative overflow-hidden">
+          <div className="space-y-2 text-center sm:text-left relative z-10">
+            <h3 className="text-xl font-orbitron font-bold text-slate-100 flex items-center justify-center sm:justify-start gap-2.5">
+              <BatInsignia size={18} className="text-bat-gold" />
               <span>Explore My Full Photography Series</span>
             </h3>
-            <p className="text-sm text-slate-400 max-w-xl">
-              I regularly publish new photography sets, street series, and visual stories on Instagram at <b>@muntasir_shawon</b>.
+            <p className="text-sm text-slate-400 max-w-xl font-sans">
+              I publish new photo series, street narratives, and visual stories regularly on Instagram at <b className="text-bat-gold font-mono">@muntasir_shawon</b>.
             </p>
           </div>
 
@@ -185,10 +185,10 @@ const Gallery = () => {
             href="https://www.instagram.com/muntasir_shawon"
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm text-white bg-gradient-to-r from-rose-500 via-pink-500 to-rose-600 hover:opacity-95 shadow-lg shadow-rose-500/25 transition-all hover:scale-105 active:scale-95 shrink-0"
+            className="flex items-center gap-2 px-6 py-3.5 rounded-xl font-mono font-bold text-xs sm:text-sm text-[#06070a] bg-gradient-to-r from-bat-gold via-amber-400 to-bat-yellow hover:brightness-110 shadow-lg shadow-bat-gold/25 transition-all hover:scale-105 active:scale-95 shrink-0 relative z-10"
           >
-            <Instagram className="w-4 h-4" />
-            <span>Visit @muntasir_shawon on Instagram</span>
+            <Instagram className="w-4 h-4 text-[#06070a]" />
+            <span>VISIT @MUNTASIR_SHAWON</span>
             <ExternalLink className="w-3.5 h-3.5" />
           </a>
         </div>
@@ -198,24 +198,24 @@ const Gallery = () => {
       {/* Full-Screen Interactive Lightbox Modal */}
       {selectedPhoto && (
         <div
-          className="fixed inset-0 z-50 bg-slate-950/95 backdrop-blur-xl flex items-center justify-center p-4 animate-in fade-in duration-300"
+          className="fixed inset-0 z-50 bg-[#06070a]/95 backdrop-blur-2xl flex items-center justify-center p-4 animate-in fade-in duration-300"
           onClick={() => setSelectedPhoto(null)}
         >
           <div
-            className="relative max-w-3xl w-full bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden shadow-2xl space-y-0"
+            className="relative max-w-3xl w-full bg-[#0B0D14] border border-bat-gold/40 rounded-3xl overflow-hidden shadow-2xl space-y-0 tactical-border"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}
             <button
               onClick={() => setSelectedPhoto(null)}
               aria-label="Close Lightbox"
-              className="absolute top-4 right-4 z-10 p-2.5 rounded-full bg-slate-950/80 border border-slate-700 text-slate-300 hover:text-white hover:bg-slate-800 transition-all"
+              className="absolute top-4 right-4 z-10 p-2.5 rounded-full bg-[#080A10]/90 border border-bat-border text-slate-300 hover:text-bat-gold hover:border-bat-gold/60 transition-all"
             >
               <X className="w-5 h-5" />
             </button>
 
             {/* Photo Preview */}
-            <div className="relative max-h-[68vh] overflow-hidden bg-slate-950 flex items-center justify-center">
+            <div className="relative max-h-[68vh] overflow-hidden bg-black flex items-center justify-center">
               <img
                 src={selectedPhoto.src}
                 alt={selectedPhoto.title}
@@ -224,20 +224,20 @@ const Gallery = () => {
             </div>
 
             {/* Modal Info Footer */}
-            <div className="p-6 bg-slate-900 border-t border-slate-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-              <div className="space-y-1">
+            <div className="p-6 bg-[#090B12] border-t border-bat-border flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div className="space-y-1 text-left">
                 <div className="flex items-center gap-2">
-                  <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-rose-500/20 text-rose-400 border border-rose-500/30">
+                  <span className="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-bat-gold/20 text-bat-gold border border-bat-gold/30">
                     {selectedPhoto.tag}
                   </span>
-                  <span className="text-xs text-slate-400">
+                  <span className="text-xs font-mono text-slate-400">
                     {selectedPhoto.category}
                   </span>
                 </div>
-                <h3 className="text-xl font-bold text-white">
+                <h3 className="text-lg font-orbitron font-bold text-white">
                   {selectedPhoto.title}
                 </h3>
-                <p className="text-xs text-slate-400 max-w-md">
+                <p className="text-xs text-slate-400 max-w-md font-sans">
                   {selectedPhoto.story}
                 </p>
               </div>
@@ -246,10 +246,10 @@ const Gallery = () => {
                 href="https://www.instagram.com/muntasir_shawon"
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs font-semibold text-slate-200 transition-all hover:scale-105"
+                className="flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-[#121624] hover:bg-[#181D30] border border-bat-border hover:border-bat-gold/50 text-xs font-mono font-bold text-slate-200 transition-all hover:scale-105"
               >
-                <Instagram className="w-3.5 h-3.5 text-rose-400" />
-                <span>View Instagram Post</span>
+                <Instagram className="w-3.5 h-3.5 text-bat-gold" />
+                <span>VIEW ON INSTAGRAM</span>
               </a>
             </div>
           </div>

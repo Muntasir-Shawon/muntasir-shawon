@@ -1,41 +1,41 @@
-﻿@tailwind base;
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 222 47% 7%;
-    --foreground: 210 40% 98%;
+    --background: 228 25% 4%;
+    --foreground: 210 20% 96%;
 
-    --card: 222 47% 10%;
-    --card-foreground: 210 40% 98%;
+    --card: 228 20% 7%;
+    --card-foreground: 210 20% 96%;
 
-    --popover: 222 47% 10%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 228 20% 7%;
+    --popover-foreground: 210 20% 96%;
 
-    --primary: 199 89% 58%;
-    --primary-foreground: 222 47% 7%;
+    --primary: 45 93% 53%; /* Batman Gold #F5C518 */
+    --primary-foreground: 228 25% 4%;
 
-    --secondary: 217 33% 17%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 224 16% 14%;
+    --secondary-foreground: 210 20% 96%;
 
-    --muted: 217 33% 15%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 224 16% 12%;
+    --muted-foreground: 218 14% 65%;
 
-    --accent: 239 84% 67%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 45 93% 53%;
+    --accent-foreground: 228 25% 4%;
 
-    --coral: 350 89% 60%;
+    --coral: 0 84% 60%;
     --coral-foreground: 210 40% 98%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217 33% 20%;
-    --input: 217 33% 20%;
-    --ring: 199 89% 58%;
+    --border: 225 15% 18%;
+    --input: 225 15% 18%;
+    --ring: 45 93% 53%;
 
-    --radius: 0.85rem;
+    --radius: 0.75rem;
   }
 }
 
@@ -50,67 +50,118 @@
   }
 
   body {
-    @apply bg-background text-foreground selection:bg-primary/30 selection:text-primary font-sans antialiased overflow-x-hidden;
+    @apply bg-background text-foreground selection:bg-amber-500/30 selection:text-amber-300 font-sans antialiased overflow-x-hidden;
+    background-color: #06070a;
     background-image: 
-      radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.07) 0px, transparent 50%),
-      radial-gradient(at 100% 100%, rgba(129, 140, 248, 0.06) 0px, transparent 50%),
-      radial-gradient(at 50% 50%, rgba(251, 113, 133, 0.04) 0px, transparent 50%);
+      radial-gradient(ellipse at 50% -20%, rgba(245, 197, 24, 0.08) 0%, transparent 60%),
+      radial-gradient(ellipse at 10% 40%, rgba(56, 189, 248, 0.04) 0%, transparent 45%),
+      radial-gradient(ellipse at 90% 80%, rgba(245, 197, 24, 0.04) 0%, transparent 45%),
+      linear-gradient(to bottom, #06070a 0%, #0a0c12 50%, #06070a 100%);
     background-attachment: fixed;
   }
 }
 
-/* Glassmorphism & Visual Accents */
-.glass-panel {
-  background: rgba(15, 23, 42, 0.65);
+/* Batman & WayneTech HUD Visual Accents */
+.hud-panel {
+  background: rgba(11, 13, 19, 0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(245, 197, 24, 0.15);
+  box-shadow: 0 8px 32px -4px rgba(0, 0, 0, 0.7), inset 0 0 0 1px rgba(255, 255, 255, 0.03);
 }
 
-.glass-card {
-  background: rgba(17, 24, 39, 0.7);
+.hud-card {
+  background: rgba(14, 17, 25, 0.8);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
 }
 
-.glass-card:hover {
-  background: rgba(30, 41, 59, 0.8);
-  border-color: rgba(56, 189, 248, 0.3);
+.hud-card:hover {
+  background: rgba(20, 24, 36, 0.9);
+  border-color: rgba(245, 197, 24, 0.4);
   transform: translateY(-4px);
-  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5), 0 0 25px -5px rgba(56, 189, 248, 0.15);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.8), 0 0 25px -5px rgba(245, 197, 24, 0.18);
 }
 
+.hud-card-blue:hover {
+  border-color: rgba(56, 189, 248, 0.45);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.8), 0 0 25px -5px rgba(56, 189, 248, 0.18);
+}
+
+/* Batman Gradient Typography */
 .text-gradient {
-  background: linear-gradient(135deg, #38BDF8 0%, #818CF8 50%, #FB7185 100%);
+  background: linear-gradient(135deg, #FDE047 0%, #F5C518 50%, #D97706 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.text-gradient-cyan {
-  background: linear-gradient(135deg, #38BDF8 0%, #818CF8 100%);
+.text-gradient-bat {
+  background: linear-gradient(135deg, #FFFFFF 0%, #E2E8F0 40%, #F5C518 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #FFFBEB 0%, #FBBF24 50%, #B45309 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-ice {
+  background: linear-gradient(135deg, #E0F2FE 0%, #38BDF8 60%, #0284C7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-gradient-rose {
-  background: linear-gradient(135deg, #FB7185 0%, #F43F5E 100%);
+  background: linear-gradient(135deg, #FFE4E6 0%, #F43F5E 60%, #9F1239 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* Custom Scrollbar */
+/* Tactical Corner Brackets */
+.tactical-border {
+  position: relative;
+}
+.tactical-border::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #F5C518;
+  border-left: 2px solid #F5C518;
+  pointer-events: none;
+}
+.tactical-border::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid #F5C518;
+  border-right: 2px solid #F5C518;
+  pointer-events: none;
+}
+
+/* Custom Tactical Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #0B0F17;
+  background: #06070a;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1E293B;
+  background: #191E2B;
   border-radius: 4px;
+  border: 1px solid rgba(245, 197, 24, 0.1);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #38BDF8;
+  background: #F5C518;
 }
+

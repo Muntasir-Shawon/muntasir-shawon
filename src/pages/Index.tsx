@@ -1,4 +1,4 @@
-﻿import Navigation from "@/components/Navigation";
+import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Skills from "@/components/Skills";
@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground selection:bg-sky-500/30 selection:text-sky-300">
+    <div className="min-h-screen bg-[#06070a] text-slate-100 selection:bg-amber-500/30 selection:text-amber-300">
       <Navigation />
       <main>
         <Hero />

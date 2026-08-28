@@ -1,42 +1,31 @@
-﻿import { GraduationCap, Brain, Code, Camera, Sparkles, Award, BookOpen, Compass } from "lucide-react";
+import { GraduationCap, Brain, Code, Camera, Sparkles, Award, BookOpen, Compass, Shield, Terminal } from "lucide-react";
+import { BatInsignia, WayneTechSeal } from "./BatInsignia";
 
 const About = () => {
   const pillars = [
     {
-      icon: <Brain className="w-6 h-6 text-sky-400" />,
+      icon: <Brain className="w-6 h-6 text-bat-gold" />,
       title: "AI, ML & Explainable AI",
       description:
-        "Building predictive algorithms, LLM integrations with Gemini AI/FastAPI, and applying Explainable AI (XAI / SHAP / LIME) to make complex machine learning systems interpretable.",
-      tag: "Intelligent Systems",
+        "Developing predictive intelligence models, LLM integrations with Gemini AI & FastAPI, and applying Explainable AI (XAI / SHAP / LIME) to make complex black-box algorithms transparent and accountable.",
+      tag: "Tactical Intelligence",
+      code: "AI_MOD_01",
     },
     {
-      icon: <Code className="w-6 h-6 text-indigo-400" />,
-      title: "Full-Stack Development",
+      icon: <Code className="w-6 h-6 text-bat-blue" />,
+      title: "Full-Stack Architecture",
       description:
-        "Developing end-to-end modern web applications with React, TypeScript, Vite, Tailwind CSS, and RESTful APIs with Python and Node.js.",
-      tag: "Software Engineering",
+        "Building mission-critical web applications with React, TypeScript, Vite, and Tailwind CSS, coupled with high-concurrency RESTful APIs in Python (FastAPI) and Node.js.",
+      tag: "Defense Systems",
+      code: "SYS_ENG_02",
     },
     {
-      icon: <Camera className="w-6 h-6 text-rose-400" />,
-      title: "Photography & Visual Storytelling",
+      icon: <Camera className="w-6 h-6 text-bat-crimson" />,
+      title: "Noir Photography & Storytelling",
       description:
-        "Capturing human emotion, street narratives, and lighting aesthetics. Blending an artist's eye for detail with an engineer's passion for precision.",
-      tag: "Creative Direction",
-    },
-  ];
-
-  const milestones = [
-    {
-      year: "Academic Focus",
-      title: "B.Sc. in Computer Science and Engineering",
-      institution: "North South University (NSU), Dhaka",
-      details: "Core Coursework: Data Structures, Algorithms, AI, Database Management Systems, Machine Learning, Web Technologies.",
-    },
-    {
-      year: "Engineering Work",
-      title: "AI & Full-Stack Projects Development",
-      institution: "InterviewMate-AI & Life Satisfaction XAI",
-      details: "Engineered AI-driven ATS analyzers, predictive ML models, and interactive web platforms.",
+        "Mastering high-contrast shadows, ambient illumination, and raw human expressions. Bringing an engineer's meticulous precision to evocative visual art.",
+      tag: "Gotham Visuals",
+      code: "VIS_ART_03",
     },
   ];
 
@@ -46,15 +35,15 @@ const About = () => {
         
         {/* Section Header */}
         <div className="text-center space-y-3 mb-16">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-xs font-semibold text-sky-400">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>BACKGROUND & VISION</span>
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-bat-gold/10 border border-bat-gold/30 text-xs font-mono font-bold text-bat-gold">
+            <BatInsignia size={14} className="text-bat-gold" />
+            <span>WAYNETECH DOSSIER // 01</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-100 tracking-tight">
-            Academic Foundation & <span className="text-gradient">Creative Philosophy</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-orbitron font-extrabold text-slate-100 tracking-tight">
+            Academic Foundation & <span className="text-gradient">Tactical Vision</span>
           </h2>
-          <p className="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto">
-            A CSE undergraduate exploring the synergy between analytical engineering and artistic visual storytelling.
+          <p className="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto font-sans">
+            A CSE undergraduate at North South University forging synergy between analytical computer science, machine learning, and cinematic visual expression.
           </p>
         </div>
 
@@ -63,21 +52,24 @@ const About = () => {
           {pillars.map((pillar, index) => (
             <div
               key={index}
-              className="glass-card rounded-2xl p-6 relative flex flex-col justify-between group hover:border-sky-500/40 transition-all duration-300"
+              className="hud-card rounded-2xl p-6 relative flex flex-col justify-between group hover:border-bat-gold/50 transition-all duration-300 tactical-border"
             >
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <div className="p-3 rounded-xl bg-slate-900 border border-slate-800 group-hover:scale-110 transition-transform">
+                  <div className="p-3 rounded-xl bg-[#080A10] border border-bat-border group-hover:border-bat-gold/40 group-hover:scale-105 transition-transform">
                     {pillar.icon}
                   </div>
-                  <span className="text-[11px] font-semibold text-slate-400 px-2.5 py-1 rounded-full bg-slate-900/80 border border-slate-800">
-                    {pillar.tag}
-                  </span>
+                  <div className="flex flex-col items-end">
+                    <span className="text-[10px] font-mono font-bold text-bat-gold px-2.5 py-1 rounded bg-[#080A10] border border-bat-border">
+                      {pillar.tag}
+                    </span>
+                    <span className="text-[9px] font-mono text-slate-500 mt-1">{pillar.code}</span>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-slate-100 group-hover:text-sky-300 transition-colors">
+                <h3 className="text-lg font-orbitron font-bold text-slate-100 group-hover:text-bat-gold transition-colors">
                   {pillar.title}
                 </h3>
-                <p className="text-sm text-slate-400 leading-relaxed">
+                <p className="text-sm text-slate-400 leading-relaxed font-sans">
                   {pillar.description}
                 </p>
               </div>
@@ -86,45 +78,55 @@ const About = () => {
         </div>
 
         {/* Academic Foundation Card & Key Metrics */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center glass-panel rounded-3xl p-8 sm:p-10 border border-slate-800/80">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center hud-panel rounded-3xl p-8 sm:p-10 border border-bat-border relative overflow-hidden">
           
-          <div className="lg:col-span-7 space-y-6">
+          {/* Subtle Background Bat Watermark */}
+          <div className="absolute right-0 bottom-0 opacity-[0.03] pointer-events-none">
+            <BatInsignia size={300} className="text-bat-gold" />
+          </div>
+
+          <div className="lg:col-span-7 space-y-6 text-left relative z-10">
             <div className="flex items-center gap-3">
-              <div className="p-3 rounded-2xl bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
-                <GraduationCap className="w-6 h-6" />
+              <div className="p-3 rounded-2xl bg-bat-gold/10 text-bat-gold border border-bat-gold/30">
+                <GraduationCap className="w-7 h-7" />
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-slate-100">
-                  North South University
-                </h3>
-                <p className="text-sm text-slate-400 font-medium">
+                <div className="flex items-center gap-2">
+                  <h3 className="text-2xl font-orbitron font-bold text-slate-100">
+                    North South University
+                  </h3>
+                  <span className="px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-[10px] font-mono font-bold">
+                    ACCREDITED
+                  </span>
+                </div>
+                <p className="text-sm font-mono text-slate-400">
                   Bachelor of Science in Computer Science & Engineering (CSE)
                 </p>
               </div>
             </div>
 
-            <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-              My engineering journey is rooted in rigorous computer science principles—ranging from data structures and algorithmic complexity to machine learning architectures and modern full-stack web applications. I believe software engineering is at its best when paired with empathy, user-centric design, and clear problem definition.
+            <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-sans">
+              My engineering discipline is forged through rigorous computer science theory—from algorithmic time complexity and data structures to neural network inference and explainable AI. I believe robust software systems demand the precision of a tactician and the intuition of a creator.
             </p>
 
             <div className="space-y-3 pt-2">
-              <div className="text-xs uppercase tracking-wider text-slate-400 font-semibold flex items-center gap-1.5">
-                <BookOpen className="w-4 h-4 text-sky-400" />
-                <span>Core Academic Areas</span>
+              <div className="text-xs uppercase font-mono tracking-wider text-bat-gold font-bold flex items-center gap-2">
+                <Terminal className="w-4 h-4 text-bat-gold" />
+                <span>CORE ACADEMIC & RESEARCH MODULES</span>
               </div>
               <div className="flex flex-wrap gap-2">
                 {[
                   "Machine Learning",
                   "Data Structures & Algorithms",
-                  "Database Management Systems",
                   "Explainable AI (XAI)",
+                  "Database Management Systems",
                   "Artificial Intelligence",
                   "Object-Oriented Programming (C++/Python)",
                   "Web Technologies",
                 ].map((course, idx) => (
                   <span
                     key={idx}
-                    className="px-3 py-1 rounded-lg bg-slate-900/90 border border-slate-800 text-xs font-medium text-slate-300 hover:text-sky-300 hover:border-sky-500/40 transition-colors"
+                    className="px-3 py-1 rounded-lg bg-[#080A10] border border-bat-border text-xs font-mono font-medium text-slate-300 hover:text-bat-gold hover:border-bat-gold/40 transition-colors"
                   >
                     {course}
                   </span>
@@ -133,37 +135,37 @@ const About = () => {
             </div>
           </div>
 
-          <div className="lg:col-span-5 grid grid-cols-2 gap-4">
-            <div className="p-5 rounded-2xl bg-slate-900/90 border border-slate-800 text-center space-y-1">
-              <div className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-indigo-400">
+          <div className="lg:col-span-5 grid grid-cols-2 gap-4 relative z-10">
+            <div className="p-5 rounded-2xl bg-[#080A10] border border-bat-border hover:border-bat-gold/40 text-center space-y-1 transition-all">
+              <div className="text-3xl font-orbitron font-black text-bat-gold drop-shadow-[0_0_12px_rgba(245,197,24,0.3)]">
                 10+
               </div>
-              <div className="text-xs font-semibold text-slate-300">Public Repositories</div>
-              <div className="text-[11px] text-slate-500">AI, ML, Web & C++</div>
+              <div className="text-xs font-mono font-bold text-slate-200">Public Repositories</div>
+              <div className="text-[11px] font-mono text-slate-500">AI, ML, Web & C++</div>
             </div>
 
-            <div className="p-5 rounded-2xl bg-slate-900/90 border border-slate-800 text-center space-y-1">
-              <div className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-amber-400">
+            <div className="p-5 rounded-2xl bg-[#080A10] border border-bat-border hover:border-bat-gold/40 text-center space-y-1 transition-all">
+              <div className="text-3xl font-orbitron font-black text-emerald-400 drop-shadow-[0_0_12px_rgba(52,211,153,0.3)]">
                 100%
               </div>
-              <div className="text-xs font-semibold text-slate-300">Dedication</div>
-              <div className="text-[11px] text-slate-500">To Clean Code & Art</div>
+              <div className="text-xs font-mono font-bold text-slate-200">Code Precision</div>
+              <div className="text-[11px] font-mono text-slate-500">Clean Architecture</div>
             </div>
 
-            <div className="p-5 rounded-2xl bg-slate-900/90 border border-slate-800 text-center space-y-1">
-              <div className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">
+            <div className="p-5 rounded-2xl bg-[#080A10] border border-bat-border hover:border-bat-gold/40 text-center space-y-1 transition-all">
+              <div className="text-3xl font-orbitron font-black text-bat-blue drop-shadow-[0_0_12px_rgba(56,189,248,0.3)]">
                 CSE
               </div>
-              <div className="text-xs font-semibold text-slate-300">Degree Candidate</div>
-              <div className="text-[11px] text-slate-500">North South University</div>
+              <div className="text-xs font-mono font-bold text-slate-200">Degree Candidate</div>
+              <div className="text-[11px] font-mono text-slate-500">North South University</div>
             </div>
 
-            <div className="p-5 rounded-2xl bg-slate-900/90 border border-slate-800 text-center space-y-1">
-              <div className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
-                Visual
+            <div className="p-5 rounded-2xl bg-[#080A10] border border-bat-border hover:border-bat-gold/40 text-center space-y-1 transition-all">
+              <div className="text-3xl font-orbitron font-black text-amber-400 drop-shadow-[0_0_12px_rgba(251,191,36,0.3)]">
+                Noir
               </div>
-              <div className="text-xs font-semibold text-slate-300">Storyteller</div>
-              <div className="text-[11px] text-slate-500">Portrait & Light Artist</div>
+              <div className="text-xs font-mono font-bold text-slate-200">Visual Artist</div>
+              <div className="text-[11px] font-mono text-slate-500">Portraiture & Light</div>
             </div>
           </div>
 
