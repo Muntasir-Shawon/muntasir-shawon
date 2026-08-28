@@ -186,15 +186,15 @@ const Hero = () => {
                 </div>
 
                 {/* Photo Frame Container with Corner Crosshairs */}
-                <div className="relative overflow-hidden rounded-xl bg-black aspect-[3.8/4.2] border border-bat-border flex items-center justify-center group">
+                <div className="relative overflow-hidden rounded-xl bg-black aspect-[4/3.7] border border-bat-border flex items-center justify-center group">
                   <img
                     src={profilePhoto}
                     alt="A.K.M. Muntasir Uddin Shawon"
-                    className="w-full h-full object-cover object-center grayscale contrast-110 group-hover:scale-105 group-hover:grayscale-0 transition-all duration-700"
+                    className="w-full h-full object-cover object-[center_30%] grayscale contrast-110 group-hover:scale-105 group-hover:grayscale-0 transition-all duration-700"
                   />
                   
                   {/* Dark Vignette Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#06070a] via-transparent to-[#06070a]/30 opacity-90" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#06070a] via-transparent to-[#06070a]/30 opacity-80" />
                   
                   {/* Watermark Bat Insignia Badge */}
                   <div className="absolute top-3 right-3 p-2 rounded-xl bg-[#080A10]/80 border border-bat-gold/40 text-bat-gold backdrop-blur-md shadow-lg shadow-black/80">
