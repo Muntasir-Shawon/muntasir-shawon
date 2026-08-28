@@ -57,8 +57,8 @@ const Navigation = () => {
               <span className="font-orbitron font-extrabold text-slate-100 text-sm tracking-wider group-hover:text-bat-gold transition-colors">
                 MUNTASIR SHAWON
               </span>
-              <span className="hidden sm:inline-block px-1.5 py-0.2 text-[9px] font-mono font-bold bg-bat-gold/10 text-bat-gold border border-bat-gold/30 rounded">
-                V-9.4
+              <span className="hidden sm:inline-block px-2 py-0.5 text-[10px] font-mono font-semibold bg-[#0D1018] text-bat-gold border border-bat-gold/30 rounded-md">
+                CSE @ NSU
               </span>
             </div>
             <div className="flex items-center gap-1.5 text-[11px] font-mono text-slate-400">

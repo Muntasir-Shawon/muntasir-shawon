@@ -13,15 +13,13 @@ export const BatInsignia: React.FC<BatInsigniaProps> = ({
     <svg
       width={size}
       height={size}
-      viewBox="0 0 100 60"
+      viewBox="0 0 100 50"
       fill="currentColor"
       xmlns="http://www.w3.org/2000/svg"
       className={`inline-block transition-transform ${className}`}
     >
       <path
-        d="M50 8 C48 14 47 18 45 20 C42 16 38 12 30 12 C18 12 8 24 2 34 C6 37 14 39 20 37 C18 42 22 46 28 47 C24 50 30 54 38 52 C42 48 46 44 50 38 C54 44 58 48 62 52 C70 54 76 50 72 47 C78 46 82 42 80 37 C86 39 94 37 98 34 C92 24 82 12 70 12 C62 12 58 16 55 20 C53 18 52 14 50 8 Z"
-        fillRule="evenodd"
-        clipRule="evenodd"
+        d="M50,15 C47,7 44,2 42,0 C42,7 39,12 30,12 C18,12 8,24 0,32 C6,34 14,35 20,33 C18,38 22,42 28,43 C23,46 30,50 38,48 C43,44 47,38 50,32 C53,38 57,44 62,48 C70,50 77,46 72,43 C78,42 82,38 80,33 C86,35 94,34 100,32 C92,24 82,12 70,12 C61,12 58,7 58,0 C56,2 53,7 50,15 Z"
       />
     </svg>
   );
