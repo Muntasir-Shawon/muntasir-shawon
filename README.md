@@ -5,8 +5,6 @@
   <img src="https://raw.githubusercontent.com/Muntasir-Shawon/muntasir-shawon/main/assets/batman-banner.png" width="100%" alt="Batcave Terminal Banner" style="border-radius: 12px; border: 1px solid #1E293B;" />
 </a>
 
-<br/><br/>
-
 <!-- Animated JetBrains Cyber-Bat Dynamic Typing Sub-header -->
 <a href="https://muntasir-shawon.github.io/muntasir-shawon/">
   <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=20&duration=3000&pause=1000&color=38BDF8&center=true&vCenter=true&multiline=true&width=800&height=85&lines=%E2%96%B8+THE+DARK+KNIGHT+OF+CODE+%E2%80%A2+AI%2FML+SYSTEMS+%26+FULL-STACK+ARCHITECT;%E2%96%B8+ARCHITECTING+FITNUT+%26+INTERVIEWMATE-AI+AT+GOTHAM+SCALE;%E2%96%B8+%22I+CODE+AT+NIGHT.+PRECISION+BUILDS+UNBREAKABLE+SYSTEMS.%22" alt="Dynamic Typing Subheader" />
