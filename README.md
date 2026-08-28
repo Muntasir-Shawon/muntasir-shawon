@@ -220,7 +220,7 @@
 </div>
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=Muntasir-Shawon&theme=tokyonight&hide_border=true&background=0D1117&ring=38BDF8&fire=38BDF8&currStreakLabel=38BDF8" alt="GitHub Streak" />
+  <img src="https://raw.githubusercontent.com/Muntasir-Shawon/muntasir-shawon/main/assets/streak.svg" alt="GitHub Streak" />
 </p>
 
 ---
