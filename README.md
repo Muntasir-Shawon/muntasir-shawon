@@ -25,7 +25,25 @@
 
 ---
 
-### ⚡ System Status & Telemetry
+### 🦇 Developer Dispatch & System Telemetry
+
+<table>
+  <tr>
+    <td width="56%" valign="middle">
+      <p>⚡ <b>AI/ML Systems Engineer & Full-Stack Architect</b> bridging high-performance backend pipelines, conversational AI agents, and intuitive user interfaces.</p>
+      <ul>
+        <li>🔭 <b>Currently Building:</b> <a href="https://github.com/Muntasir-Shawon/FitNut-Fitness-Nutrition-System"><b>FitNut</b></a> (AI Health Ecosystem) & <a href="https://github.com/Muntasir-Shawon/InterviewMate-AI"><b>InterviewMate-AI</b></a></li>
+        <li>🧠 <b>Research & Focus:</b> LangChain AI Agents, Explainable AI (XAI / SHAP), FastAPI & React Native</li>
+        <li>💬 <b>Ask Me About:</b> Full-Stack Systems, Gemini AI Integration, LLM Agent Memory, Cloud Architecture</li>
+        <li>📫 <b>Direct Signal:</b> <a href="mailto:muntasir.shawon78@gmail.com"><code>muntasir.shawon78@gmail.com</code></a></li>
+        <li>🦇 <b>Night Shift:</b> <i>"I code at night. Precision builds systems; darkness sharpens focus."</i></li>
+      </ul>
+    </td>
+    <td width="44%" align="center" valign="middle">
+      <img src="https://raw.githubusercontent.com/Muntasir-Shawon/muntasir-shawon/main/assets/batman-avatar.png" width="100%" alt="Batman Coding on Laptop" style="border-radius: 12px;" />
+    </td>
+  </tr>
+</table>
 
 ```bash
 ╭─ ⚡ muntasir@core-engine ~
