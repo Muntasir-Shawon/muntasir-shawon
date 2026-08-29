@@ -5,6 +5,7 @@ import { BatInsignia } from "./BatInsignia";
 
 const Hero = () => {
   const titles = [
+    "IEEE Published AI & ML Researcher",
     "AI & Machine Learning Specialist",
     "Dark Knight of Explainable AI (XAI)",
     "Full-Stack Intelligence Architect",

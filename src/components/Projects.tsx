@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Github, ExternalLink, Sparkles, Brain, Code2, Database, ArrowUpRight, Dumbbell, ShieldAlert, Cpu } from "lucide-react";
+import { Github, ExternalLink, Sparkles, Brain, Code2, Database, ArrowUpRight, Dumbbell, ShieldAlert, Cpu, Layers } from "lucide-react";
 import { BatInsignia } from "./BatInsignia";
 
 interface Project {
@@ -12,6 +12,7 @@ interface Project {
   githubUrl: string;
   liveUrl?: string;
   featured?: boolean;
+  badgeText?: string;
   icon: JSX.Element;
 }
 
@@ -19,6 +20,19 @@ const Projects = () => {
   const [filter, setFilter] = useState<string>("all");
 
   const projects: Project[] = [
+    {
+      id: "satellite-building-segmentation",
+      title: "Satellite Building Segmentation (IEEE IS 2026)",
+      category: "ai-ml",
+      codeName: "RESEARCH // IEEE-IS2026",
+      description:
+        "Accepted at the 2026 13th IEEE International Conference on Intelligent Systems. An automated GIS-integrated deep learning framework evaluating 7 semantic segmentation architectures (U-Net++, DeepLabV3+, ResNet50 U-Net, etc.) across 4,193 GeoTIFF tiles, achieving 0.823 mIoU and 0.903 Dice score for urban monitoring and CDA no-development zones.",
+      tags: ["PyTorch", "U-Net++", "DeepLabV3+", "QGIS", "GDAL", "GeoTIFF", "IEEE IS 2026", "Remote Sensing"],
+      githubUrl: "https://github.com/Muntasir-Shawon",
+      featured: true,
+      badgeText: "IEEE ACCEPTED '26",
+      icon: <Layers className="w-5 h-5 text-bat-gold" />,
+    },
     {
       id: "fitnut-system",
       title: "FitNut — Fitness & Nutrition Ecosystem",
@@ -137,7 +151,7 @@ const Projects = () => {
               {project.featured && (
                 <div className="absolute top-0 right-0">
                   <div className="bg-gradient-to-l from-bat-gold/20 to-transparent px-4 py-1.5 rounded-bl-2xl text-[10px] font-mono font-bold text-bat-gold uppercase tracking-wider border-b border-l border-bat-gold/30">
-                    OPERATIONAL
+                    {project.badgeText || "OPERATIONAL"}
                   </div>
                 </div>
               )}

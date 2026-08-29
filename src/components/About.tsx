@@ -106,7 +106,7 @@ const About = () => {
             </div>
 
             <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-sans">
-              My engineering discipline is forged through rigorous computer science theory—from algorithmic time complexity and data structures to neural network inference and explainable AI. I believe robust software systems demand the precision of a tactician and the intuition of a creator.
+              My engineering discipline is forged through rigorous computer science theory—from algorithmic optimization and data structures to deep learning, remote sensing, and satellite computer vision. Co-author of research accepted at the <strong className="text-bat-gold">2026 13th IEEE International Conference on Intelligent Systems</strong>.
             </p>
 
             <div className="space-y-3 pt-2">
@@ -116,11 +116,12 @@ const About = () => {
               </div>
               <div className="flex flex-wrap gap-2">
                 {[
+                  "Deep Learning (U-Net++/CNNs)",
+                  "Remote Sensing & GIS",
+                  "Explainable AI (XAI)",
                   "Machine Learning",
                   "Data Structures & Algorithms",
-                  "Explainable AI (XAI)",
                   "Database Management Systems",
-                  "Artificial Intelligence",
                   "Object-Oriented Programming (C++/Python)",
                   "Web Technologies",
                 ].map((course, idx) => (
@@ -137,35 +138,35 @@ const About = () => {
 
           <div className="lg:col-span-5 grid grid-cols-2 gap-4 relative z-10">
             <div className="p-5 rounded-2xl bg-[#080A10] border border-bat-border hover:border-bat-gold/40 text-center space-y-1 transition-all">
-              <div className="text-3xl font-orbitron font-black text-bat-gold drop-shadow-[0_0_12px_rgba(245,197,24,0.3)]">
+              <div className="text-2xl sm:text-3xl font-orbitron font-black text-bat-gold drop-shadow-[0_0_12px_rgba(245,197,24,0.3)]">
+                IEEE '26
+              </div>
+              <div className="text-xs font-mono font-bold text-slate-200">Accepted Author</div>
+              <div className="text-[11px] font-mono text-slate-500">13th IEEE IS Conf</div>
+            </div>
+
+            <div className="p-5 rounded-2xl bg-[#080A10] border border-bat-border hover:border-bat-gold/40 text-center space-y-1 transition-all">
+              <div className="text-2xl sm:text-3xl font-orbitron font-black text-emerald-400 drop-shadow-[0_0_12px_rgba(52,211,153,0.3)]">
+                4.1K+
+              </div>
+              <div className="text-xs font-mono font-bold text-slate-200">GeoTIFF Dataset</div>
+              <div className="text-[11px] font-mono text-slate-500">Satellite AI / QGIS</div>
+            </div>
+
+            <div className="p-5 rounded-2xl bg-[#080A10] border border-bat-border hover:border-bat-gold/40 text-center space-y-1 transition-all">
+              <div className="text-2xl sm:text-3xl font-orbitron font-black text-bat-blue drop-shadow-[0_0_12px_rgba(56,189,248,0.3)]">
+                0.823
+              </div>
+              <div className="text-xs font-mono font-bold text-slate-200">mIoU Benchmark</div>
+              <div className="text-[11px] font-mono text-slate-500">U-Net++ SOTA Acc</div>
+            </div>
+
+            <div className="p-5 rounded-2xl bg-[#080A10] border border-bat-border hover:border-bat-gold/40 text-center space-y-1 transition-all">
+              <div className="text-2xl sm:text-3xl font-orbitron font-black text-amber-400 drop-shadow-[0_0_12px_rgba(251,191,36,0.3)]">
                 10+
               </div>
               <div className="text-xs font-mono font-bold text-slate-200">Public Repositories</div>
-              <div className="text-[11px] font-mono text-slate-500">AI, ML, Web & C++</div>
-            </div>
-
-            <div className="p-5 rounded-2xl bg-[#080A10] border border-bat-border hover:border-bat-gold/40 text-center space-y-1 transition-all">
-              <div className="text-3xl font-orbitron font-black text-emerald-400 drop-shadow-[0_0_12px_rgba(52,211,153,0.3)]">
-                100%
-              </div>
-              <div className="text-xs font-mono font-bold text-slate-200">Code Precision</div>
-              <div className="text-[11px] font-mono text-slate-500">Clean Architecture</div>
-            </div>
-
-            <div className="p-5 rounded-2xl bg-[#080A10] border border-bat-border hover:border-bat-gold/40 text-center space-y-1 transition-all">
-              <div className="text-3xl font-orbitron font-black text-bat-blue drop-shadow-[0_0_12px_rgba(56,189,248,0.3)]">
-                CSE
-              </div>
-              <div className="text-xs font-mono font-bold text-slate-200">Degree Candidate</div>
-              <div className="text-[11px] font-mono text-slate-500">North South University</div>
-            </div>
-
-            <div className="p-5 rounded-2xl bg-[#080A10] border border-bat-border hover:border-bat-gold/40 text-center space-y-1 transition-all">
-              <div className="text-3xl font-orbitron font-black text-amber-400 drop-shadow-[0_0_12px_rgba(251,191,36,0.3)]">
-                Noir
-              </div>
-              <div className="text-xs font-mono font-bold text-slate-200">Visual Artist</div>
-              <div className="text-[11px] font-mono text-slate-500">Portraiture & Light</div>
+              <div className="text-[11px] font-mono text-slate-500">AI, ML & Web Stack</div>
             </div>
           </div>
 

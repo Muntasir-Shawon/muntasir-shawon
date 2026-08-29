@@ -32,10 +32,12 @@ const Skills = () => {
       icon: <Brain className="w-5 h-5 text-bat-blue" />,
       code: "AI_ML_DS",
       skills: [
+        { name: "PyTorch & Deep Learning", level: "Advanced", description: "Semantic Segmentation, CNNs, U-Net++, DeepLabV3+, Transfer Learning", badge: "Deep Learning" },
+        { name: "Geospatial AI & Remote Sensing", level: "Proficient", description: "QGIS, GDAL, GeoTIFF Pipeline, Spatial Alignment, Tiling", badge: "GIS / Vision" },
+        { name: "Explainable AI (XAI)", level: "Proficient", description: "SHAP, LIME, Model Interpretability & Transparency", badge: "Research" },
         { name: "LangChain & LLMs", level: "Proficient", description: "Agentic Workflows, Conversational Memory, RAG", badge: "AI Agents" },
         { name: "FastAPI", level: "Proficient", description: "High-performance Asynchronous Python Microservices", badge: "Backend AI" },
         { name: "Gemini AI & LLMs", level: "Proficient", description: "Multimodal Inference, Prompt Pipelines, Structured JSON", badge: "GenAI" },
-        { name: "Explainable AI (XAI)", level: "Proficient", description: "SHAP, LIME, Model Interpretability & Transparency", badge: "Research" },
         { name: "Scikit-Learn", level: "Proficient", description: "Predictive Models, Classifiers, Evaluation Metrics", badge: "ML Core" },
         { name: "Pandas & NumPy", level: "Advanced", description: "Data Wrangling, High-performance Matrix Ops", badge: "Data Science" },
       ],
