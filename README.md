@@ -209,6 +209,10 @@
   <img src="https://raw.githubusercontent.com/Muntasir-Shawon/muntasir-shawon/main/assets/streak.svg" alt="GitHub Streak" />
 </p>
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Muntasir-Shawon/muntasir-shawon/main/assets/bat-contributions.svg" alt="Bat Night Patrol Contribution Graph" width="100%" />
+</p>
+
 ---
 
 <div align="center">
