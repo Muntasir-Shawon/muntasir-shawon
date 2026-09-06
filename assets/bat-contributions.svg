@@ -3,99 +3,96 @@
   @keyframes batFlight {
     0.0% { transform: translate(30.0px, 38.0px); }
     1.1% { transform: translate(30.0px, 52.5px); }
-    2.1% { transform: translate(30.0px, 67.0px); }
-    3.2% { transform: translate(30.0px, 81.5px); }
-    4.2% { transform: translate(30.0px, 96.0px); }
-    5.3% { transform: translate(30.0px, 110.5px); }
-    6.3% { transform: translate(44.5px, 96.0px); }
-    7.4% { transform: translate(44.5px, 81.5px); }
-    8.4% { transform: translate(59.0px, 96.0px); }
-    9.5% { transform: translate(73.5px, 110.5px); }
-    10.5% { transform: translate(88.0px, 110.5px); }
-    11.6% { transform: translate(102.5px, 110.5px); }
-    12.6% { transform: translate(117.0px, 110.5px); }
-    13.7% { transform: translate(131.5px, 110.5px); }
-    14.7% { transform: translate(146.0px, 110.5px); }
-    15.8% { transform: translate(160.5px, 110.5px); }
-    16.8% { transform: translate(175.0px, 110.5px); }
-    17.9% { transform: translate(189.5px, 96.0px); }
-    18.9% { transform: translate(204.0px, 110.5px); }
-    20.0% { transform: translate(218.5px, 125.0px); }
-    21.1% { transform: translate(233.0px, 125.0px); }
-    22.1% { transform: translate(247.5px, 125.0px); }
-    23.2% { transform: translate(262.0px, 125.0px); }
-    24.2% { transform: translate(276.5px, 125.0px); }
-    25.3% { transform: translate(291.0px, 110.5px); }
-    26.3% { transform: translate(305.5px, 96.0px); }
-    27.4% { transform: translate(320.0px, 81.5px); }
-    28.4% { transform: translate(334.5px, 67.0px); }
-    29.5% { transform: translate(349.0px, 67.0px); }
-    30.5% { transform: translate(363.5px, 67.0px); }
-    31.6% { transform: translate(378.0px, 67.0px); }
-    32.6% { transform: translate(392.5px, 67.0px); }
-    33.7% { transform: translate(407.0px, 67.0px); }
-    34.7% { transform: translate(421.5px, 67.0px); }
-    35.8% { transform: translate(436.0px, 67.0px); }
-    36.8% { transform: translate(450.5px, 67.0px); }
-    37.9% { transform: translate(465.0px, 67.0px); }
-    38.9% { transform: translate(479.5px, 67.0px); }
-    40.0% { transform: translate(494.0px, 67.0px); }
-    41.1% { transform: translate(508.5px, 67.0px); }
-    42.1% { transform: translate(523.0px, 67.0px); }
-    43.2% { transform: translate(537.5px, 67.0px); }
-    44.2% { transform: translate(552.0px, 67.0px); }
-    45.3% { transform: translate(566.5px, 67.0px); }
-    46.3% { transform: translate(581.0px, 67.0px); }
-    47.4% { transform: translate(595.5px, 67.0px); }
-    48.4% { transform: translate(595.5px, 81.5px); }
-    49.5% { transform: translate(610.0px, 96.0px); }
-    50.5% { transform: translate(624.5px, 110.5px); }
-    51.6% { transform: translate(639.0px, 110.5px); }
-    52.6% { transform: translate(653.5px, 110.5px); }
-    53.7% { transform: translate(668.0px, 110.5px); }
-    54.7% { transform: translate(682.5px, 110.5px); }
-    55.8% { transform: translate(697.0px, 110.5px); }
-    56.8% { transform: translate(711.5px, 110.5px); }
-    57.9% { transform: translate(726.0px, 110.5px); }
-    58.9% { transform: translate(740.5px, 110.5px); }
-    60.0% { transform: translate(755.0px, 110.5px); }
-    61.1% { transform: translate(769.5px, 110.5px); }
-    62.1% { transform: translate(769.5px, 125.0px); }
-    63.2% { transform: translate(784.0px, 110.5px); }
-    64.2% { transform: translate(784.0px, 96.0px); }
-    65.3% { transform: translate(784.0px, 81.5px); }
-    66.3% { transform: translate(784.0px, 67.0px); }
-    67.4% { transform: translate(784.0px, 52.5px); }
-    68.4% { transform: translate(784.0px, 38.0px); }
-    69.5% { transform: translate(784.0px, 52.5px); }
-    70.5% { transform: translate(784.0px, 67.0px); }
-    71.6% { transform: translate(784.0px, 81.5px); }
-    72.6% { transform: translate(755.0px, 110.5px); }
-    73.7% { transform: translate(726.0px, 38.0px); }
-    74.7% { transform: translate(697.0px, 67.0px); }
-    75.8% { transform: translate(668.0px, 96.0px); }
-    76.8% { transform: translate(639.0px, 125.0px); }
-    77.9% { transform: translate(610.0px, 52.5px); }
-    78.9% { transform: translate(581.0px, 81.5px); }
-    80.0% { transform: translate(552.0px, 110.5px); }
-    81.1% { transform: translate(523.0px, 38.0px); }
-    82.1% { transform: translate(494.0px, 67.0px); }
-    83.2% { transform: translate(465.0px, 96.0px); }
-    84.2% { transform: translate(436.0px, 125.0px); }
-    85.3% { transform: translate(407.0px, 52.5px); }
-    86.3% { transform: translate(378.0px, 81.5px); }
-    87.4% { transform: translate(349.0px, 110.5px); }
-    88.4% { transform: translate(320.0px, 38.0px); }
-    89.5% { transform: translate(291.0px, 67.0px); }
-    90.5% { transform: translate(262.0px, 96.0px); }
-    91.6% { transform: translate(233.0px, 125.0px); }
-    92.6% { transform: translate(204.0px, 52.5px); }
-    93.7% { transform: translate(175.0px, 81.5px); }
-    94.7% { transform: translate(146.0px, 110.5px); }
-    95.8% { transform: translate(117.0px, 38.0px); }
-    96.8% { transform: translate(88.0px, 67.0px); }
-    97.9% { transform: translate(59.0px, 96.0px); }
-    98.9% { transform: translate(30.0px, 125.0px); }
+    2.2% { transform: translate(30.0px, 67.0px); }
+    3.3% { transform: translate(30.0px, 81.5px); }
+    4.3% { transform: translate(44.5px, 96.0px); }
+    5.4% { transform: translate(59.0px, 110.5px); }
+    6.5% { transform: translate(73.5px, 110.5px); }
+    7.6% { transform: translate(88.0px, 110.5px); }
+    8.7% { transform: translate(102.5px, 110.5px); }
+    9.8% { transform: translate(117.0px, 110.5px); }
+    10.9% { transform: translate(131.5px, 110.5px); }
+    12.0% { transform: translate(146.0px, 110.5px); }
+    13.0% { transform: translate(160.5px, 110.5px); }
+    14.1% { transform: translate(175.0px, 96.0px); }
+    15.2% { transform: translate(189.5px, 110.5px); }
+    16.3% { transform: translate(204.0px, 125.0px); }
+    17.4% { transform: translate(218.5px, 125.0px); }
+    18.5% { transform: translate(233.0px, 125.0px); }
+    19.6% { transform: translate(247.5px, 125.0px); }
+    20.7% { transform: translate(262.0px, 125.0px); }
+    21.7% { transform: translate(276.5px, 110.5px); }
+    22.8% { transform: translate(291.0px, 96.0px); }
+    23.9% { transform: translate(305.5px, 81.5px); }
+    25.0% { transform: translate(320.0px, 67.0px); }
+    26.1% { transform: translate(334.5px, 67.0px); }
+    27.2% { transform: translate(349.0px, 67.0px); }
+    28.3% { transform: translate(363.5px, 67.0px); }
+    29.3% { transform: translate(378.0px, 67.0px); }
+    30.4% { transform: translate(392.5px, 67.0px); }
+    31.5% { transform: translate(407.0px, 67.0px); }
+    32.6% { transform: translate(421.5px, 67.0px); }
+    33.7% { transform: translate(436.0px, 67.0px); }
+    34.8% { transform: translate(450.5px, 67.0px); }
+    35.9% { transform: translate(465.0px, 67.0px); }
+    37.0% { transform: translate(479.5px, 67.0px); }
+    38.0% { transform: translate(494.0px, 67.0px); }
+    39.1% { transform: translate(508.5px, 67.0px); }
+    40.2% { transform: translate(523.0px, 67.0px); }
+    41.3% { transform: translate(537.5px, 67.0px); }
+    42.4% { transform: translate(552.0px, 67.0px); }
+    43.5% { transform: translate(566.5px, 67.0px); }
+    44.6% { transform: translate(581.0px, 67.0px); }
+    45.7% { transform: translate(581.0px, 81.5px); }
+    46.7% { transform: translate(595.5px, 96.0px); }
+    47.8% { transform: translate(610.0px, 110.5px); }
+    48.9% { transform: translate(624.5px, 110.5px); }
+    50.0% { transform: translate(639.0px, 110.5px); }
+    51.1% { transform: translate(653.5px, 110.5px); }
+    52.2% { transform: translate(668.0px, 110.5px); }
+    53.3% { transform: translate(682.5px, 110.5px); }
+    54.3% { transform: translate(697.0px, 110.5px); }
+    55.4% { transform: translate(711.5px, 110.5px); }
+    56.5% { transform: translate(726.0px, 110.5px); }
+    57.6% { transform: translate(740.5px, 110.5px); }
+    58.7% { transform: translate(755.0px, 110.5px); }
+    59.8% { transform: translate(755.0px, 125.0px); }
+    60.9% { transform: translate(769.5px, 110.5px); }
+    62.0% { transform: translate(769.5px, 96.0px); }
+    63.0% { transform: translate(769.5px, 81.5px); }
+    64.1% { transform: translate(769.5px, 67.0px); }
+    65.2% { transform: translate(769.5px, 52.5px); }
+    66.3% { transform: translate(769.5px, 38.0px); }
+    67.4% { transform: translate(769.5px, 52.5px); }
+    68.5% { transform: translate(769.5px, 67.0px); }
+    69.6% { transform: translate(769.5px, 81.5px); }
+    70.7% { transform: translate(784.0px, 96.0px); }
+    71.7% { transform: translate(755.0px, 125.0px); }
+    72.8% { transform: translate(726.0px, 52.5px); }
+    73.9% { transform: translate(697.0px, 81.5px); }
+    75.0% { transform: translate(668.0px, 110.5px); }
+    76.1% { transform: translate(639.0px, 38.0px); }
+    77.2% { transform: translate(610.0px, 67.0px); }
+    78.3% { transform: translate(581.0px, 96.0px); }
+    79.3% { transform: translate(552.0px, 125.0px); }
+    80.4% { transform: translate(523.0px, 52.5px); }
+    81.5% { transform: translate(494.0px, 81.5px); }
+    82.6% { transform: translate(465.0px, 110.5px); }
+    83.7% { transform: translate(436.0px, 38.0px); }
+    84.8% { transform: translate(407.0px, 67.0px); }
+    85.9% { transform: translate(378.0px, 96.0px); }
+    87.0% { transform: translate(349.0px, 125.0px); }
+    88.0% { transform: translate(320.0px, 52.5px); }
+    89.1% { transform: translate(291.0px, 81.5px); }
+    90.2% { transform: translate(262.0px, 110.5px); }
+    91.3% { transform: translate(233.0px, 38.0px); }
+    92.4% { transform: translate(204.0px, 67.0px); }
+    93.5% { transform: translate(175.0px, 96.0px); }
+    94.6% { transform: translate(146.0px, 125.0px); }
+    95.7% { transform: translate(117.0px, 52.5px); }
+    96.7% { transform: translate(88.0px, 81.5px); }
+    97.8% { transform: translate(59.0px, 110.5px); }
+    98.9% { transform: translate(30.0px, 38.0px); }
     100.0% { transform: translate(30.0px, 38.0px); }
   }
   @keyframes wingFlapLeft {
@@ -148,32 +145,33 @@
 </g>
 
 <!-- Month Labels -->
-<text x="56.5" y="36" fill="#64748B" font-size="10" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">Sep</text>
-<text x="114.5" y="36" fill="#64748B" font-size="10" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">Oct</text>
-<text x="172.5" y="36" fill="#64748B" font-size="10" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">Nov</text>
-<text x="245.0" y="36" fill="#64748B" font-size="10" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">Dec</text>
-<text x="303.0" y="36" fill="#64748B" font-size="10" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">Jan</text>
-<text x="361.0" y="36" fill="#64748B" font-size="10" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">Feb</text>
-<text x="419.0" y="36" fill="#64748B" font-size="10" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">Mar</text>
-<text x="491.5" y="36" fill="#64748B" font-size="10" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">Apr</text>
-<text x="549.5" y="36" fill="#64748B" font-size="10" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">May</text>
-<text x="622.0" y="36" fill="#64748B" font-size="10" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">Jun</text>
-<text x="680.0" y="36" fill="#64748B" font-size="10" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">Jul</text>
-<text x="738.0" y="36" fill="#64748B" font-size="10" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">Aug</text>
+<text x="42.0" y="36" fill="#64748B" font-size="10" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">Sep</text>
+<text x="100.0" y="36" fill="#64748B" font-size="10" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">Oct</text>
+<text x="158.0" y="36" fill="#64748B" font-size="10" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">Nov</text>
+<text x="230.5" y="36" fill="#64748B" font-size="10" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">Dec</text>
+<text x="288.5" y="36" fill="#64748B" font-size="10" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">Jan</text>
+<text x="346.5" y="36" fill="#64748B" font-size="10" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">Feb</text>
+<text x="404.5" y="36" fill="#64748B" font-size="10" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">Mar</text>
+<text x="477.0" y="36" fill="#64748B" font-size="10" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">Apr</text>
+<text x="535.0" y="36" fill="#64748B" font-size="10" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">May</text>
+<text x="607.5" y="36" fill="#64748B" font-size="10" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">Jun</text>
+<text x="665.5" y="36" fill="#64748B" font-size="10" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">Jul</text>
+<text x="723.5" y="36" fill="#64748B" font-size="10" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">Aug</text>
+<text x="796.0" y="36" fill="#64748B" font-size="10" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">Sep</text>
 
 <!-- Contribution Cells Grid -->
 <g>
 <rect x="42.0" y="48.0" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
 <rect x="42.0" y="62.5" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
 <rect x="42.0" y="77.0" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
-<rect x="42.0" y="91.5" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
-<rect x="42.0" y="106.0" width="11" height="11" rx="2.5" fill="#39D353"/>
-<rect x="42.0" y="120.5" width="11" height="11" rx="2.5" fill="#006D32"/>
+<rect x="42.0" y="91.5" width="11" height="11" rx="2.5" fill="#006D32"/>
+<rect x="42.0" y="106.0" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
+<rect x="42.0" y="120.5" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
 <rect x="42.0" y="135.0" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
 <rect x="56.5" y="48.0" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
 <rect x="56.5" y="62.5" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
 <rect x="56.5" y="77.0" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
-<rect x="56.5" y="91.5" width="11" height="11" rx="2.5" fill="#006D32"/>
+<rect x="56.5" y="91.5" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
 <rect x="56.5" y="106.0" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
 <rect x="56.5" y="120.5" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
 <rect x="56.5" y="135.0" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
@@ -231,20 +229,20 @@
 <rect x="172.5" y="77.0" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
 <rect x="172.5" y="91.5" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
 <rect x="172.5" y="106.0" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
-<rect x="172.5" y="120.5" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
+<rect x="172.5" y="120.5" width="11" height="11" rx="2.5" fill="#0E4429"/>
 <rect x="172.5" y="135.0" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
 <rect x="187.0" y="48.0" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
 <rect x="187.0" y="62.5" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
 <rect x="187.0" y="77.0" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
 <rect x="187.0" y="91.5" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
-<rect x="187.0" y="106.0" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
-<rect x="187.0" y="120.5" width="11" height="11" rx="2.5" fill="#0E4429"/>
+<rect x="187.0" y="106.0" width="11" height="11" rx="2.5" fill="#0E4429"/>
+<rect x="187.0" y="120.5" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
 <rect x="187.0" y="135.0" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
 <rect x="201.5" y="48.0" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
 <rect x="201.5" y="62.5" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
 <rect x="201.5" y="77.0" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
 <rect x="201.5" y="91.5" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
-<rect x="201.5" y="106.0" width="11" height="11" rx="2.5" fill="#0E4429"/>
+<rect x="201.5" y="106.0" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
 <rect x="201.5" y="120.5" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
 <rect x="201.5" y="135.0" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
 <rect x="216.0" y="48.0" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
@@ -281,14 +279,14 @@
 <rect x="274.0" y="91.5" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
 <rect x="274.0" y="106.0" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
 <rect x="274.0" y="120.5" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
-<rect x="274.0" y="135.0" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
+<rect x="274.0" y="135.0" width="11" height="11" rx="2.5" fill="#26A641"/>
 <rect x="288.5" y="48.0" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
 <rect x="288.5" y="62.5" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
 <rect x="288.5" y="77.0" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
 <rect x="288.5" y="91.5" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
 <rect x="288.5" y="106.0" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
 <rect x="288.5" y="120.5" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
-<rect x="288.5" y="135.0" width="11" height="11" rx="2.5" fill="#26A641"/>
+<rect x="288.5" y="135.0" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
 <rect x="303.0" y="48.0" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
 <rect x="303.0" y="62.5" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
 <rect x="303.0" y="77.0" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
@@ -431,15 +429,15 @@
 <rect x="578.5" y="135.0" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
 <rect x="593.0" y="48.0" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
 <rect x="593.0" y="62.5" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
-<rect x="593.0" y="77.0" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
-<rect x="593.0" y="91.5" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
+<rect x="593.0" y="77.0" width="11" height="11" rx="2.5" fill="#0E4429"/>
+<rect x="593.0" y="91.5" width="11" height="11" rx="2.5" fill="#006D32"/>
 <rect x="593.0" y="106.0" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
 <rect x="593.0" y="120.5" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
 <rect x="593.0" y="135.0" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
 <rect x="607.5" y="48.0" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
 <rect x="607.5" y="62.5" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
-<rect x="607.5" y="77.0" width="11" height="11" rx="2.5" fill="#0E4429"/>
-<rect x="607.5" y="91.5" width="11" height="11" rx="2.5" fill="#006D32"/>
+<rect x="607.5" y="77.0" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
+<rect x="607.5" y="91.5" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
 <rect x="607.5" y="106.0" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
 <rect x="607.5" y="120.5" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
 <rect x="607.5" y="135.0" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
@@ -518,19 +516,19 @@
 <rect x="767.0" y="77.0" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
 <rect x="767.0" y="91.5" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
 <rect x="767.0" y="106.0" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
-<rect x="767.0" y="120.5" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
-<rect x="767.0" y="135.0" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
-<rect x="781.5" y="48.0" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
-<rect x="781.5" y="62.5" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
-<rect x="781.5" y="77.0" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
-<rect x="781.5" y="91.5" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
+<rect x="767.0" y="120.5" width="11" height="11" rx="2.5" fill="#39D353"/>
+<rect x="767.0" y="135.0" width="11" height="11" rx="2.5" fill="#39D353"/>
+<rect x="781.5" y="48.0" width="11" height="11" rx="2.5" fill="#39D353"/>
+<rect x="781.5" y="62.5" width="11" height="11" rx="2.5" fill="#26A641"/>
+<rect x="781.5" y="77.0" width="11" height="11" rx="2.5" fill="#39D353"/>
+<rect x="781.5" y="91.5" width="11" height="11" rx="2.5" fill="#0E4429"/>
 <rect x="781.5" y="106.0" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
-<rect x="781.5" y="120.5" width="11" height="11" rx="2.5" fill="#39D353"/>
-<rect x="781.5" y="135.0" width="11" height="11" rx="2.5" fill="#39D353"/>
-<rect x="796.0" y="48.0" width="11" height="11" rx="2.5" fill="#39D353"/>
-<rect x="796.0" y="62.5" width="11" height="11" rx="2.5" fill="#26A641"/>
-<rect x="796.0" y="77.0" width="11" height="11" rx="2.5" fill="#39D353"/>
-<rect x="796.0" y="91.5" width="11" height="11" rx="2.5" fill="#0E4429"/>
+<rect x="781.5" y="120.5" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
+<rect x="781.5" y="135.0" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
+<rect x="796.0" y="48.0" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
+<rect x="796.0" y="62.5" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
+<rect x="796.0" y="77.0" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
+<rect x="796.0" y="91.5" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
 <rect x="796.0" y="106.0" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
 <rect x="796.0" y="120.5" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
 <rect x="796.0" y="135.0" width="11" height="11" rx="2.5" fill="#161B22" stroke="#21262D" stroke-width="0.8"/>
