@@ -1,4 +1,4 @@
-import { ArrowUp, Github, Instagram, Mail } from "lucide-react";
+import { ArrowUp, Github, Linkedin, Instagram, Mail } from "lucide-react";
 import { BatInsignia } from "./BatInsignia";
 
 const Footer = () => {
@@ -42,6 +42,16 @@ const Footer = () => {
               className="p-2.5 rounded-xl bg-[#0B0D14] border border-bat-border text-slate-400 hover:text-bat-gold hover:border-bat-gold/40 transition-colors"
             >
               <Github className="w-4 h-4" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/muntasir-shawon"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn"
+              className="p-2.5 rounded-xl bg-[#0B0D14] border border-bat-border text-slate-400 hover:text-bat-gold hover:border-bat-gold/40 transition-colors"
+              title="LinkedIn"
+            >
+              <Linkedin className="w-4 h-4" />
             </a>
             <a
               href="https://www.instagram.com/muntasir_shawon"

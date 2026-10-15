@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { ArrowRight, Terminal, Camera, Brain, Code2, Database, Github, Instagram, Mail, ChevronDown, ShieldCheck, Zap, Crosshair } from "lucide-react";
+import { ArrowRight, Terminal, Camera, Brain, Code2, Database, Github, Linkedin, Instagram, Mail, ChevronDown, ShieldCheck, Zap, Crosshair } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo.jpg";
 import { BatInsignia } from "./BatInsignia";
 
@@ -144,6 +144,16 @@ const Hero = () => {
                 title="GitHub Dossier"
               >
                 <Github className="w-4 h-4" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/muntasir-shawon"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="LinkedIn Profile"
+                className="p-2.5 rounded-xl bg-[#0D1018] border border-bat-border text-slate-400 hover:text-bat-gold hover:border-bat-gold/50 hover:bg-[#131722] transition-all"
+                title="LinkedIn Network"
+              >
+                <Linkedin className="w-4 h-4" />
               </a>
               <a
                 href="https://www.instagram.com/muntasir_shawon"

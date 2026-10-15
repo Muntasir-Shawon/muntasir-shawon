@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Github, Instagram, MapPin, Copy, Check, Send, MessageSquare, ExternalLink, Radio, Loader2 } from "lucide-react";
+import { Mail, Github, Linkedin, Instagram, MapPin, Copy, Check, Send, MessageSquare, ExternalLink, Radio, Loader2 } from "lucide-react";
 import { toast } from "sonner";
 import { BatInsignia } from "./BatInsignia";
 import { sendTransmission } from "../services/contactService";
@@ -138,7 +138,7 @@ const Contact = () => {
                 <span className="text-[10px] font-mono uppercase tracking-widest text-slate-500 font-bold block">
                   NETWORK NODES:
                 </span>
-                <div className="grid grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
                   <a
                     href="https://github.com/Muntasir-Shawon"
                     target="_blank"
@@ -148,6 +148,19 @@ const Contact = () => {
                     <div className="flex items-center gap-2">
                       <Github className="w-4 h-4 text-slate-400 group-hover:text-bat-gold" />
                       <span>GitHub</span>
+                    </div>
+                    <ExternalLink className="w-3 h-3 text-slate-500" />
+                  </a>
+
+                  <a
+                    href="https://www.linkedin.com/in/muntasir-shawon"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="p-3 rounded-xl bg-[#080A10] hover:bg-[#121624] border border-bat-border hover:border-bat-gold/50 flex items-center justify-between text-xs font-mono text-slate-300 font-semibold transition-all group"
+                  >
+                    <div className="flex items-center gap-2">
+                      <Linkedin className="w-4 h-4 text-slate-400 group-hover:text-bat-gold" />
+                      <span>LinkedIn</span>
                     </div>
                     <ExternalLink className="w-3 h-3 text-slate-500" />
                   </a>
