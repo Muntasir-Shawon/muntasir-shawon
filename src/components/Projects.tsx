@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Github, ExternalLink, Sparkles, Brain, Code2, Database, ArrowUpRight, Dumbbell, ShieldAlert, Cpu, Layers } from "lucide-react";
+import { Github, ExternalLink, Sparkles, Brain, Code2, Database, ArrowUpRight, Dumbbell, ShieldAlert, Cpu, Layers, Activity, PenTool, GraduationCap, BarChart3 } from "lucide-react";
 import { BatInsignia } from "./BatInsignia";
 
 interface Project {
@@ -32,6 +32,74 @@ const Projects = () => {
       featured: true,
       badgeText: "IEEE ACCEPTED '26",
       icon: <Layers className="w-5 h-5 text-bat-gold" />,
+    },
+    {
+      id: "dhakasafe-ai",
+      title: "DhakaSafe AI — Street Theft Risk & Safer Route Engine",
+      category: "ai-ml",
+      codeName: "URBAN-DEFENSE // DHAKASAFE",
+      description:
+        "AI-powered urban street theft risk prediction and risk-weighted Dijkstra safer route recommendation engine tailored for Dhaka. Integrates tree ensemble models (XGBoost, LightGBM, Random Forest), TreeSHAP explainability, spatial graph routing via NetworkX, FastAPI backend, and interactive React 19 UI.",
+      tags: ["FastAPI", "React 19", "TypeScript", "XGBoost", "LightGBM", "TreeSHAP", "NetworkX", "Dijkstra"],
+      githubUrl: "https://github.com/Muntasir-Shawon/DhakaSafe-AI",
+      liveUrl: "https://dhakasafe-ai-teal.vercel.app",
+      featured: true,
+      badgeText: "LIVE SYSTEM",
+      icon: <ShieldAlert className="w-5 h-5 text-emerald-400" />,
+    },
+    {
+      id: "nexus-urban-nervous-system",
+      title: "NEXUS — AI Urban Nervous System (Flood & Mobility)",
+      category: "ai-ml",
+      codeName: "MISSION-CRITICAL // NEXUS-URBAN",
+      description:
+        "Real-time multimodal AI decision-support platform for urban flood intelligence, disaster response, and mobility resilience across Dhaka Metropole. Models flood cascade predictions, network graph routing, emergency dispatching, and ethical AI governance compliance (UNESCO & ITU).",
+      tags: ["React", "FastAPI", "NetworkX", "TypeScript", "Tailwind CSS", "Graph Algorithms", "Urban AI"],
+      githubUrl: "https://github.com/Muntasir-Shawon/nexus-urban-nervous-system",
+      liveUrl: "https://muntasir-shawon.github.io/nexus-urban-nervous-system/",
+      featured: true,
+      badgeText: "OPERATIONAL",
+      icon: <Activity className="w-5 h-5 text-bat-blue" />,
+    },
+    {
+      id: "handwrite-ai",
+      title: "HandWrite AI — Bilingual Handwriting Generation (PyTorch)",
+      category: "ai-ml",
+      codeName: "DEEP-LEARNING // HANDWRITE-AI",
+      description:
+        "Research-grade deep learning architecture converting typed English & Bangla text into natural, continuous, and personalized handwritten document trajectories. Features ResNet style encoder, BiLSTM text encoder, Gaussian window attention, and Mixture Density Networks (MDN), achieving 95.88% recognition accuracy on IAM and 93.15% on BanglaWriting.",
+      tags: ["PyTorch", "Deep Learning", "FastAPI", "React", "BiLSTM", "MDN", "Attention", "English & Bangla"],
+      githubUrl: "https://github.com/Muntasir-Shawon/handwrite-ai",
+      featured: true,
+      badgeText: "RESEARCH ML",
+      icon: <PenTool className="w-5 h-5 text-amber-400" />,
+    },
+    {
+      id: "ielts-ai-coach",
+      title: "IELTS AI Coach — Full-Stack AI Preparation Platform",
+      category: "full-stack",
+      codeName: "SYSTEM // IELTS-AI-COACH",
+      description:
+        "Production-grade, full-stack AI platform designed for students preparing for IELTS Academic and General Training examinations. Integrates ML predictive band scoring algorithms, interactive test modules, simulated practice exams, and real-time performance analytics built with FastAPI, React 18, and Scikit-Learn.",
+      tags: ["FastAPI", "React 18", "TypeScript", "Scikit-Learn", "Tailwind CSS", "Python", "Vite"],
+      githubUrl: "https://github.com/Muntasir-Shawon/ielts-ai-coach",
+      liveUrl: "https://muntasir-shawon.github.io/ielts-ai-coach/",
+      featured: true,
+      badgeText: "DEPLOYED",
+      icon: <GraduationCap className="w-5 h-5 text-bat-gold" />,
+    },
+    {
+      id: "bangladesh-ecommerce-intelligence",
+      title: "Bangladesh E-Commerce Customer Intelligence Platform",
+      category: "data-cpp",
+      codeName: "ENTERPRISE // BD-ECOMMERCE",
+      description:
+        "Enterprise-grade customer intelligence and analytics platform modeled for Bangladesh e-commerce across all 8 divisions (70,936 orders, ৳436.66M GMV). Powered by PostgreSQL, DuckDB, RFM segmentation, Customer Lifetime Value (CLV), churn prediction models (XGBoost, Random Forest), SHAP explainability, and Power BI dashboards.",
+      tags: ["Python", "PostgreSQL", "DuckDB", "XGBoost", "SHAP (XAI)", "Power BI", "RFM / CLV", "Scikit-Learn"],
+      githubUrl: "https://github.com/Muntasir-Shawon/bangladesh-ecommerce-customer-intelligence",
+      featured: true,
+      badgeText: "ENTERPRISE BI",
+      icon: <BarChart3 className="w-5 h-5 text-emerald-400" />,
     },
     {
       id: "fitnut-system",
@@ -228,7 +296,7 @@ const Projects = () => {
             className="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl bg-[#090B12] hover:bg-[#121624] border border-bat-border hover:border-bat-gold/50 text-xs sm:text-sm font-mono font-semibold text-slate-200 transition-all hover:scale-105"
           >
             <BatInsignia size={16} className="text-bat-gold" />
-            <span>EXPLORE ALL 10+ REPOSITORIES ON GITHUB</span>
+            <span>EXPLORE ALL 18+ REPOSITORIES ON GITHUB</span>
             <ExternalLink className="w-3.5 h-3.5 text-slate-500" />
           </a>
         </div>

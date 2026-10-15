@@ -163,7 +163,7 @@ const About = () => {
 
             <div className="p-5 rounded-2xl bg-[#080A10] border border-bat-border hover:border-bat-gold/40 text-center space-y-1 transition-all">
               <div className="text-2xl sm:text-3xl font-orbitron font-black text-amber-400 drop-shadow-[0_0_12px_rgba(251,191,36,0.3)]">
-                10+
+                18+
               </div>
               <div className="text-xs font-mono font-bold text-slate-200">Public Repositories</div>
               <div className="text-[11px] font-mono text-slate-500">AI, ML & Web Stack</div>

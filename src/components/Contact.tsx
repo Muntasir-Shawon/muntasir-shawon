@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { Mail, Github, Instagram, MapPin, Copy, Check, Send, Sparkles, MessageSquare, ExternalLink, Radio, ShieldCheck } from "lucide-react";
+import { Mail, Github, Instagram, MapPin, Copy, Check, Send, MessageSquare, ExternalLink, Radio, Loader2 } from "lucide-react";
 import { toast } from "sonner";
 import { BatInsignia } from "./BatInsignia";
+import { sendTransmission } from "../services/contactService";
 
 const Contact = () => {
   const [copied, setCopied] = useState(false);
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [formData, setFormData] = useState({ name: "", email: "", message: "", botcheck: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const email = "muntasir.shawon78@gmail.com";
@@ -17,19 +18,45 @@ const Contact = () => {
     setTimeout(() => setCopied(false), 2500);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.name || !formData.email || !formData.message) {
-      toast.error("Please fill in all tactical fields.");
+    const name = formData.name.trim();
+    const senderEmail = formData.email.trim();
+    const message = formData.message.trim();
+
+    if (!name || !senderEmail || !message) {
+      toast.error("Tactical alert: Please fill in all transmission fields.");
+      return;
+    }
+
+    // Email validation
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(senderEmail)) {
+      toast.error("Invalid frequency: Please enter a valid email address.");
       return;
     }
 
     setIsSubmitting(true);
-    setTimeout(() => {
+
+    try {
+      const result = await sendTransmission({
+        name,
+        email: senderEmail,
+        message,
+        botcheck: formData.botcheck,
+      });
+
+      if (result.success) {
+        toast.success(result.message || "Transmission received! Batcomputer uplink established.");
+        setFormData({ name: "", email: "", message: "", botcheck: "" });
+      } else {
+        toast.error(result.message || "Transmission failed. You can also copy direct channel.");
+      }
+    } catch (error) {
+      toast.error("Transmission signal lost. Please copy direct email address.");
+    } finally {
       setIsSubmitting(false);
-      toast.success("Transmission received! Batcomputer uplink established.");
-      setFormData({ name: "", email: "", message: "" });
-    }, 1000);
+    }
   };
 
   return (
@@ -80,8 +107,9 @@ const Contact = () => {
                   </span>
                 </div>
                 <button
+                  type="button"
                   onClick={handleCopyEmail}
-                  className="p-2 rounded-xl bg-[#141724] hover:bg-[#1E2336] text-slate-300 hover:text-bat-gold transition-all shrink-0 active:scale-95 border border-bat-border hover:border-bat-gold/50"
+                  className="p-2 rounded-xl bg-[#141724] hover:bg-[#1E2336] text-slate-300 hover:text-bat-gold transition-all shrink-0 active:scale-95 border border-bat-border hover:border-bat-gold/50 cursor-pointer"
                   title="Copy Channel"
                 >
                   {copied ? (
@@ -157,6 +185,17 @@ const Contact = () => {
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-4">
+                {/* Honeypot field for bot protection */}
+                <input
+                  type="text"
+                  name="botcheck"
+                  value={formData.botcheck}
+                  onChange={(e) => setFormData({ ...formData, botcheck: e.target.value })}
+                  style={{ display: "none" }}
+                  tabIndex={-1}
+                  autoComplete="off"
+                />
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-1.5">
                     <label className="text-xs font-mono font-bold text-slate-300">
@@ -164,6 +203,7 @@ const Contact = () => {
                     </label>
                     <input
                       type="text"
+                      required
                       placeholder="e.g. Bruce Wayne"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -177,6 +217,7 @@ const Contact = () => {
                     </label>
                     <input
                       type="email"
+                      required
                       placeholder="wayne@enterprises.com"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -191,6 +232,7 @@ const Contact = () => {
                   </label>
                   <textarea
                     rows={4}
+                    required
                     placeholder="Brief me on your vision, technical specs, or collaboration goals..."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
@@ -201,10 +243,19 @@ const Contact = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full sm:w-auto px-8 py-3.5 rounded-xl font-mono font-bold text-xs sm:text-sm text-[#06070a] bg-gradient-to-r from-bat-gold via-amber-400 to-bat-yellow hover:brightness-110 shadow-lg shadow-bat-gold/25 flex items-center justify-center gap-2 transition-all hover:scale-105 active:scale-95 disabled:opacity-50"
+                  className="w-full sm:w-auto px-8 py-3.5 rounded-xl font-mono font-bold text-xs sm:text-sm text-[#06070a] bg-gradient-to-r from-bat-gold via-amber-400 to-bat-yellow hover:brightness-110 shadow-lg shadow-bat-gold/25 flex items-center justify-center gap-2 transition-all hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 cursor-pointer"
                 >
-                  <Send className="w-4 h-4" />
-                  <span>{isSubmitting ? "TRANSMITTING INTEL..." : "TRANSMIT PAYLOAD"}</span>
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="w-4 h-4 animate-spin" />
+                      <span>TRANSMITTING INTEL...</span>
+                    </>
+                  ) : (
+                    <>
+                      <Send className="w-4 h-4" />
+                      <span>TRANSMIT PAYLOAD</span>
+                    </>
+                  )}
                 </button>
               </form>
             </div>
